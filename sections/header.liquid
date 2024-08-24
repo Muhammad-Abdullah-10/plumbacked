@@ -22,19 +22,18 @@
           <!-- <button class="btn btn-outline-success" type="submit">Search</button> -->
         </form>
         <a
-          class="navbar-brand logo-area justify-content-center col-4"
-          href="{{ shop.url }}"
-          >
-          {% if section.settings.header_logo != blank %}
-            <img src="{{ section.settings.header_logo | img_url: '200x' |   }}" alt="" />
-          {% else %}
-            <a class=" text-decoration-none text-black-50" href="{{ shop.url }}">
-              {{ section.settings.mobile_menu_title }}
-            </a>
-          {% endif %}
-          
-          </a
-        >
+            class="navbar-brand logo-area justify-content-center col-4"
+            href="{{ shop.url }}"
+            >
+            {% if section.settings.header_logo != blank %}
+                <img src="{{ section.settings.header_logo | img_url: '200x' }}" alt="" />
+            {% else %}
+                <span class="text-decoration-none text-black-50">
+                {{ section.settings.mobile_menu_title }}
+                </span>
+            {% endif %}
+        </a>
+
         <button
           class="navbar-toggler"
           type="button"
