@@ -31,8 +31,8 @@
                 </div>
             </div>
             <div class="col-20 col-md-6 col-sm-12">
-                {% for footermenu in linklists[section.settings.footer-menu-1].links %}
-                    <div class="footer-heading"> {{ section.settings.footer-menu-1.title }} </div>
+                {% for footermenu in linklists[section.settings.footer-menu-one].links %}
+                    <div class="footer-heading"> {{ section.settings.footer-menu-one.title }} </div>
                     <ul class="footer-ul">
                         <li class="footer-li"><a href="{{ footermenu.url  }}" class="footer-a">{{  footermenu.title }}</a></li>
                         {% comment %} <li class="footer-li"><a href="#" class="footer-a">hoodies</a></li>
@@ -70,7 +70,7 @@
 
 {% schema %}
     {   
-        "name": "Footer",
+        "name": "footer",
         "settings": [
         {
             "type" : "image_picker",
@@ -79,7 +79,7 @@
         }
         ,{
           "type": "link_list",
-          "id": "footer-menu-1",
+          "id": "footer-menu-one",
           "label": "Footer Menu 1",
           "default": "main-menu"
         }
