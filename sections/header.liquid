@@ -96,3 +96,24 @@
       </div>
     </nav>
   </header>
+
+  
+{% schema %}
+    {
+      "name": "Header",
+      "settings": [
+        {
+          "type": "text",
+          "id": "mobile_menu_title",
+          "label": "Shop Name",
+          "default": "Store Name",
+          "info": "Enter Your Store Name Here"
+        }, {
+          "type": "link_list",
+          "id": "menu",
+          "label": "Header Menu",
+          "default": "main-menu"
+        }
+      ]
+    }
+  {% endschema %}
