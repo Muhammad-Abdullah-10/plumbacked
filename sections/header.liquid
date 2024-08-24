@@ -28,9 +28,14 @@
             {% if section.settings.header_logo != blank %}
                 <img src="{{ section.settings.header_logo | img_url: '200x' }}" alt="" />
             {% else %}
-                <span class="text-decoration-none text-black-50">
-                {{ section.settings.mobile_menu_title }}
-                </span>
+                {% if section.settings.mobile_menu_title != blank %}
+                    <span class="text-decoration-none text-black-50">
+                        {{ section.settings.mobile_menu_title }}
+                    </span>
+                    {% else %}
+                        <span class=" text-black-50"> {{ shop.name }}</span>    
+                {% endif %}
+                
             {% endif %}
         </a>
 
