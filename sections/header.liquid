@@ -26,9 +26,14 @@
           href="{{ shop.url }}"
           >
           {% if settings.header_logo != blank %}
-            <img src="{{ settings.header_logo | img_url: '200x' }}" alt="{{ shop.name }}">
+            {% assign full_logo_url = shop.url | append: settings.header_logo | img_url: '200x' %}
+            <a href="{{ shop.url }}">
+              <img src="{{ full_logo_url }}" alt="{{ shop.name }}">
+            </a>
           {% else %}
-            <img src="{{ 'default-logo.png' | asset_url }}" alt="{{ shop.name }}">
+            <a href="{{ shop.url }}">
+              {{ section.settings.mobile_menu_title }}
+            </a>
           {% endif %}
           
           </a
