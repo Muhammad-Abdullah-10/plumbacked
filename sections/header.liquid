@@ -25,10 +25,10 @@
           class="navbar-brand logo-area justify-content-center col-4"
           href="{{ shop.url }}"
           >
-          {% if settings.header_logo != blank %}
-            <img src="{{ settings.settings.header_logo | img_url: '200x'  }}" alt="{{ section.settings.header_logo  }}">
+          {% if section.settings.header_logo != blank %}
+            <img src="{{ sections.settings.header_logo | img_url: '200x' |   }}" alt="{{ section.settings.header_logo  }}">
           {% else %}
-            <a href="{{ shop.url }}">
+            <a class=" text-decoration-none text-black-50" href="{{ shop.url }}">
               {{ section.settings.mobile_menu_title }}
             </a>
           {% endif %}
