@@ -5,7 +5,7 @@
             <div class="col-40 col-md-6 col-sm-12">
                 <div class="wrapper-first-col-footer">
                     <div class="wrapper-logo-footer">
-                        <img src="assets/footer-logo.png" alt="">
+                        <img src="{{ section.settings.footer-logo |  image_url: : '200x'  }}" alt="">
                     </div>
                     <div class="wrapper-footer-desc">
                         <p>
@@ -63,3 +63,22 @@
         </div>
     </div>
 </footer>
+
+
+{% schema %}
+    {
+        "settings": [
+        {
+            "type" : "image_picker",
+            "id" : "footer-logo",
+            "label": "Footer Logo"
+        }
+        ,{
+          "type": "link_list",
+          "id": "footer-menu-1",
+          "label": "Footer Menu 1",
+          "default": "main-menu"
+        },
+        ]
+    }
+{% endschema %}
