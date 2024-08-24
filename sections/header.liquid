@@ -24,7 +24,14 @@
         <a
           class="navbar-brand logo-area justify-content-center col-4"
           href="{{ shop.url }}"
-          >{{ section.settings.mobile_menu_title }}</a
+          >
+          {% if settings.header_logo != blank %}
+            <img src="{{ settings.header_logo | img_url: '200x' }}" alt="{{ shop.name }}">
+          {% else %}
+            <img src="{{ 'default-logo.png' | asset_url }}" alt="{{ shop.name }}">
+          {% endif %}
+          
+          </a
         >
         <button
           class="navbar-toggler"
@@ -38,11 +45,11 @@
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="col-3 form-lg-devices-n">
-          <a href="{{ routes.account_url }}" class="account mx-1">
+          <a href="{{ routes.account_url }}" class="account mx-1 text-decoration-none">
             <i class="fa fa-user mx-1" aria-hidden="true"></i>
             Account
           </a>
-          <a href="{{ routes.cart_url }}" class="cart mx-1">
+          <a href="{{ routes.cart_url }}" class="cart mx-1 text-decoration-none">
             <i class="fa fa-shopping-bag" aria-hidden="true"></i>
             Shopping
           </a>
@@ -110,11 +117,17 @@
           "label": "Shop Name",
           "default": "Store Name",
           "info": "Enter Your Store Name Here"
-        }, {
+        },
+        {
           "type": "link_list",
           "id": "menu",
           "label": "Header Menu",
           "default": "main-menu"
+        },
+        {
+        "type": "image_picker",
+        "id": "header_logo",
+        "label": "Logo"
         }
       ]
     }
