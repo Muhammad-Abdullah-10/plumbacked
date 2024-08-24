@@ -1,0 +1,654 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Plum</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="index.css" />
+  </head>
+  <body>
+    <header>
+      <nav
+        class="navbar navbar-expand-lg navbar-light bg-transparent max-1320 mx-auto container-fluid flex-column"
+      >
+        <div class="row justify-content-between w-100 row-top">
+          <form
+            class="d-flex justify-content-center align-items-center form-lg-devices-n col-2 flex-row-reverse"
+          >
+            <input
+              class="form-control me-2 border-0 border-bottom bg-transparent form-lg-devices-n"
+              type="search"
+              placeholder=""
+              aria-label="Search"
+            />
+            <i
+              class="fa fa-search form-lg-devices-n"
+              aria-hidden="true"
+              type="submit"
+            ></i>
+            <!-- <button class="btn btn-outline-success" type="submit">Search</button> -->
+          </form>
+          <a
+            class="navbar-brand logo-area justify-content-center col-4"
+            href="#"
+            >Navbar</a
+          >
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="col-3 form-lg-devices-n">
+            <span class="account mx-1">
+              <i class="fa fa-user mx-1" aria-hidden="true"></i>
+              Account
+            </span>
+            <span class="cart mx-1">
+              <i class="fa fa-shopping-bag" aria-hidden="true"></i>
+              Shopping
+            </span>
+          </div>
+        </div>
+        <div class="row row-menu">
+          <div class="col-12 min-width-1320-px max-1320">
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav me-auto mb-2 mb-lg-0 mx-0">
+                <li class="nav-item">
+                  <a class="nav-link active" aria-current="page" href="#"
+                    >Jewelry & Accessories</a
+                  >
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Clothing & Shoes</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Home & Living</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Wedding & Party</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Toys & Entertainment</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Art & Collectibles</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Craft Supplies & Tools</a>
+                </li>
+              </ul>
+              <form
+                class="d-flex justify-content-center align-items-center dispaly-small-devices-only flex-row-reverse"
+              >
+                <i
+                  class="fa fa-search dispaly-small-devices-only"
+                  aria-hidden="true"
+                  type="submit"
+                ></i>
+                <input
+                  class="form-control me-2 border-0 border-bottom bg-transparent dispaly-small-devices-only"
+                  type="search"
+                  placeholder="Search"
+                  aria-label="Search"
+                />
+
+                <!-- <button class="btn btn-outline-success" type="submit">Search</button> -->
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <!-- banner area -->
+    <div class="banner container-fluid mb-5 py-5 position-relative">
+      <div class="position-absolute flower-left">
+        <img src="assets/Frame.png" alt="" />
+      </div>
+      <div class="position-absolute flower-right">
+        <img src="assets/Frame2.png" alt="" />
+      </div>
+      <div class="row align-items-center max-1320 mx-auto">
+        <div class="col-lg-7 col-sm-12 text-banner-l my-md-3">
+          <h2 class="banner-heading roboto-medium">Collections</h2>
+          <h4 class="banner-subheading">
+            you can explore ans shop many differnt collection from various
+            barands here.
+          </h4>
+          <a class="button-shop-now">
+            <i class="fa fa-shopping-bag" aria-hidden="true"></i>
+            Shop Now
+          </a>
+        </div>
+        <div class="col-lg-5 col-sm-12 image-banner-r justify-content-center">
+          <img src="assets/image-product.png" alt="" class="banner-img" />
+        </div>
+      </div>
+    </div>
+    <!-- banner area -->
+
+    <!-- client logo -->
+    <div class="client-logo-area d-grid max-1320 mx-auto my-5">
+      <div class="client-wrapper-logo">
+        <img src="assets/client-logo.png" alt="" class="client-logo" />
+      </div>
+      <div class="client-wrapper-logo">
+        <img src="assets/client-logo.png" alt="" class="client-logo" />
+      </div>
+      <div class="client-wrapper-logo">
+        <img src="assets/client-logo.png" alt="" class="client-logo" />
+      </div>
+      <div class="client-wrapper-logo">
+        <img src="assets/client-logo.png" alt="" class="client-logo" />
+      </div>
+      <div class="client-wrapper-logo">
+        <img src="assets/client-logo.png" alt="" class="client-logo" />
+      </div>
+    </div>
+    <!-- client logo -->
+
+    <!-- gird category -->
+    <div class="grid-images-wrapper position-relative max-1320 mx-auto my-5">
+      <div class="text-vertical position-absolute"></div>
+      <div class="grid-images">
+        <div class="double-img position-relative">
+          <div class="position-absolute">
+            <span class="left">Jacket</span>
+            <span class="right">104 Products</span>
+          </div>
+          <img src="assets/double-img.png" alt="" />
+        </div>
+        <div class="sub">
+          <div>
+            <img src="assets/sub01.png" alt="" class="sub-img" />
+          </div>
+          <div class="wrapper-img-sub-grid position-relative">
+            <span class="position-absolute">Sale</span>
+            <img src="assets/sub02.png" alt="" class="sub-img" />
+          </div>
+          <div>
+            <img src="assets/sub03.png" alt="" class="sub-img" />
+          </div>
+          <div>
+            <img src="assets/sub04.png" alt="" class="sub-img" />
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- gird category -->
+
+    <!-- newsletter -->
+    <div class="container max-1320 mx-auto mb-5">
+      <div class="row max-1320 justify-content-center mw-100 mx-auto">
+        <h2 class="letter text-center">Or subscribe to the newsletter</h2>
+      </div>
+    </div>
+    <!-- newsletter -->
+
+    <!-- zara -->
+    <div class="container-fluid wrapper-zara position-relative my-5 my-md-3">
+      <div class="zara-big-logo position-absolute"></div>
+      <div class="row max-1320 w-100">
+        <div class="col-lg-6"></div>
+        <div class="data-wrapper-zara col-lg-6 col-md-12">
+          <img class="logo-zara-data" src="assets/white-zara.png" />
+          <p class="zara-desc mb-lg-5 mb-md-3">
+            Lustrous yet understated. The new evening wear collection
+            exclusively offered at the reopened Giorgio Armani boutique in Los
+            Angeles.
+          </p>
+          <div class="button-wrapper-collection">
+            <a href="#"> See Collection </a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- zara -->
+
+    <!-- products -->
+    <div class="container max-1320 w-100 p-0 best-seller-wrapper">
+      <div class="row max-1320 w-100">
+        <h2 class="best-seller text-center">Best Seller</h2>
+      </div>
+    </div>
+
+    <div class="container max-1320 w-100 p-0 filter-wrapper my-md-3 my-lg-5">
+      <div class="row max-1320 w-100 filter-row">
+        <div class="filters w-50">
+          <a href="#" class="filter-name active">All Products</a>
+          <a href="#" class="filter-name">T-Shirts</a>
+          <a href="#" class="filter-name">Hoodies</a>
+          <a href="#" class="filter-name">Hoodies Jacket</a>
+        </div>
+        <div class="show-all-button w-50">
+          <a href="#">Show All</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="prodcuts-wrapper container-xxl mb-5 ">
+        <div class="row w-100 max-1320 mx-auto display-grid">
+            <!-- product -->
+            <div class="product--wrapper position-relative">
+                <div class="product--wrapper-img">
+                    <a href="#" class="img-wrapper">
+                        <img src="assets/image-product-1.png" alt="" class="product-img">
+                    </a>
+                    <div class="shop-bar position-absolute">
+                        <div class="w-50">
+                            <a href="#" class="whislist-wrapper">
+                                <i class="fa fa-heart-o" aria-hidden="true"></i>
+                            </a>
+                            <a href="#" class="search-wrapper-p">
+                                <i class="fa fa-search" aria-hidden="true"></i>
+                            </a>
+                        </div>
+                        <div class="w-50">
+                            <a href="#" class="shop-now-p">
+                                <span class="wrapper-cart-p">
+                                    <i class="fa fa-shopping-bag " aria-hidden="true"></i>
+                                </span>
+                                Shop Now</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="product-wrapper-data">
+                    <h6 class="product-title">
+                        <a href="#">
+                            Nike Sportsware
+                        </a>   
+                    </h6>
+                    <div class="pricing-wrapper">
+                        <span class="category">
+                            Sports
+                        </span>
+                        <span class="price">
+                            $55.85
+                        </span>
+                    </div>
+                </div>
+            </div>
+            <!-- product -->
+            <!-- product -->
+            <div class="product--wrapper position-relative">
+                <div class="product--wrapper-img">
+                    <a href="#" class="img-wrapper">
+                        <img src="assets/image-product-1.png" alt="" class="product-img">
+                    </a>
+                    <div class="shop-bar position-absolute">
+                        <div class="w-50">
+                            <a href="#" class="whislist-wrapper">
+                                <i class="fa fa-heart-o" aria-hidden="true"></i>
+                            </a>
+                            <a href="#" class="search-wrapper-p">
+                                <i class="fa fa-search" aria-hidden="true"></i>
+                            </a>
+                        </div>
+                        <div class="w-50">
+                            <a href="#" class="shop-now-p">
+                                <span class="wrapper-cart-p">
+                                    <i class="fa fa-shopping-bag " aria-hidden="true"></i>
+                                </span>
+                                Shop Now</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="product-wrapper-data">
+                    <h6 class="product-title">
+                        <a href="#">
+                            Nike Sportsware
+                        </a>   
+                    </h6>
+                    <div class="pricing-wrapper">
+                        <span class="category">
+                            Sports
+                        </span>
+                        <span class="price">
+                            $55.85
+                        </span>
+                    </div>
+                </div>
+            </div>
+            <!-- product -->
+            <!-- product -->
+            <div class="product--wrapper position-relative">
+                <div class="product--wrapper-img">
+                    <a href="#" class="img-wrapper">
+                        <img src="assets/image-product-1.png" alt="" class="product-img">
+                    </a>
+                    <div class="shop-bar position-absolute">
+                        <div class="w-50">
+                            <a href="#" class="whislist-wrapper">
+                                <i class="fa fa-heart-o" aria-hidden="true"></i>
+                            </a>
+                            <a href="#" class="search-wrapper-p">
+                                <i class="fa fa-search" aria-hidden="true"></i>
+                            </a>
+                        </div>
+                        <div class="w-50">
+                            <a href="#" class="shop-now-p">
+                                <span class="wrapper-cart-p">
+                                    <i class="fa fa-shopping-bag " aria-hidden="true"></i>
+                                </span>
+                                Shop Now</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="product-wrapper-data">
+                    <h6 class="product-title">
+                        <a href="#">
+                            Nike Sportsware
+                        </a>   
+                    </h6>
+                    <div class="pricing-wrapper">
+                        <span class="category">
+                            Sports
+                        </span>
+                        <span class="price">
+                            $55.85
+                        </span>
+                    </div>
+                </div>
+            </div>
+            <!-- product -->
+            <!-- product -->
+            <div class="product--wrapper position-relative">
+                <div class="product--wrapper-img">
+                    <a href="#" class="img-wrapper">
+                        <img src="assets/image-product-1.png" alt="" class="product-img">
+                    </a>
+                    <div class="shop-bar position-absolute">
+                        <div class="w-50">
+                            <a href="#" class="whislist-wrapper">
+                                <i class="fa fa-heart-o" aria-hidden="true"></i>
+                            </a>
+                            <a href="#" class="search-wrapper-p">
+                                <i class="fa fa-search" aria-hidden="true"></i>
+                            </a>
+                        </div>
+                        <div class="w-50">
+                            <a href="#" class="shop-now-p">
+                                <span class="wrapper-cart-p">
+                                    <i class="fa fa-shopping-bag " aria-hidden="true"></i>
+                                </span>
+                                Shop Now</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="product-wrapper-data">
+                    <h6 class="product-title">
+                        <a href="#">
+                            Nike Sportsware
+                        </a>   
+                    </h6>
+                    <div class="pricing-wrapper">
+                        <span class="category">
+                            Sports
+                        </span>
+                        <span class="price">
+                            $55.85
+                        </span>
+                    </div>
+                </div>
+            </div>
+            <!-- product -->
+           <!-- product -->
+           <div class="product--wrapper position-relative">
+            <div class="product--wrapper-img">
+                <a href="#" class="img-wrapper">
+                    <img src="assets/image-product-1.png" alt="" class="product-img">
+                </a>
+                <div class="shop-bar position-absolute">
+                        <div class="w-50">
+                            <a href="#" class="whislist-wrapper">
+                                <i class="fa fa-heart-o" aria-hidden="true"></i>
+                            </a>
+                            <a href="#" class="search-wrapper-p">
+                                <i class="fa fa-search" aria-hidden="true"></i>
+                            </a>
+                        </div>
+                        <div class="w-50">
+                            <a href="#" class="shop-now-p">
+                                <span class="wrapper-cart-p">
+                                    <i class="fa fa-shopping-bag " aria-hidden="true"></i>
+                                </span>
+                                Shop Now</a>
+                        </div>
+                    </div>
+            </div>
+            <div class="product-wrapper-data">
+                <h6 class="product-title">
+                    <a href="#">
+                        Nike Sportsware
+                    </a>   
+                </h6>
+                <div class="pricing-wrapper">
+                    <span class="category">
+                        Sports
+                    </span>
+                    <span class="price">
+                        $55.85
+                    </span>
+                </div>
+            </div>
+        </div>
+        <!-- product -->
+         <!-- product -->
+         <div class="product--wrapper position-relative">
+            <div class="product--wrapper-img">
+                <a href="#" class="img-wrapper">
+                    <img src="assets/image-product-1.png" alt="" class="product-img">
+                </a>
+                <div class="shop-bar position-absolute">
+                        <div class="w-50">
+                            <a href="#" class="whislist-wrapper">
+                                <i class="fa fa-heart-o" aria-hidden="true"></i>
+                            </a>
+                            <a href="#" class="search-wrapper-p">
+                                <i class="fa fa-search" aria-hidden="true"></i>
+                            </a>
+                        </div>
+                        <div class="w-50">
+                            <a href="#" class="shop-now-p">
+                                <span class="wrapper-cart-p">
+                                    <i class="fa fa-shopping-bag " aria-hidden="true"></i>
+                                </span>
+                                Shop Now</a>
+                        </div>
+                    </div>
+            </div>
+            <div class="product-wrapper-data">
+                <h6 class="product-title">
+                    <a href="#">
+                        Nike Sportsware
+                    </a>   
+                </h6>
+                <div class="pricing-wrapper">
+                    <span class="category">
+                        Sports
+                    </span>
+                    <span class="price">
+                        $55.85
+                    </span>
+                </div>
+            </div>
+        </div>
+        <!-- product -->
+         <!-- product -->
+         <div class="product--wrapper position-relative">
+            <div class="product--wrapper-img">
+                <a href="#" class="img-wrapper">
+                    <img src="assets/image-product-1.png" alt="" class="product-img">
+                </a>
+                <div class="shop-bar position-absolute">
+                        <div class="w-50">
+                            <a href="#" class="whislist-wrapper">
+                                <i class="fa fa-heart-o" aria-hidden="true"></i>
+                            </a>
+                            <a href="#" class="search-wrapper-p">
+                                <i class="fa fa-search" aria-hidden="true"></i>
+                            </a>
+                        </div>
+                        <div class="w-50">
+                            <a href="#" class="shop-now-p">
+                                <span class="wrapper-cart-p">
+                                    <i class="fa fa-shopping-bag " aria-hidden="true"></i>
+                                </span>
+                                Shop Now</a>
+                        </div>
+                    </div>
+            </div>
+            <div class="product-wrapper-data">
+                <h6 class="product-title">
+                    <a href="#">
+                        Nike Sportsware
+                    </a>   
+                </h6>
+                <div class="pricing-wrapper">
+                    <span class="category">
+                        Sports
+                    </span>
+                    <span class="price">
+                        $55.85
+                    </span>
+                </div>
+            </div>
+        </div>
+        <!-- product -->
+          <!-- product -->
+          <div class="product--wrapper position-relative">
+            <div class="product--wrapper-img">
+                <a href="#" class="img-wrapper">
+                    <img src="assets/image-product-1.png" alt="" class="product-img">
+                </a>
+                <div class="shop-bar position-absolute">
+                    <div class="w-50">
+                        <a href="#" class="whislist-wrapper">
+                            <i class="fa fa-heart-o" aria-hidden="true"></i>
+                        </a>
+                        <a href="#" class="search-wrapper-p">
+                            <i class="fa fa-search" aria-hidden="true"></i>
+                        </a>
+                    </div>
+                    <div class="w-50">
+                        <a href="#" class="shop-now-p">
+                            <span class="wrapper-cart-p">
+                                <i class="fa fa-shopping-bag " aria-hidden="true"></i>
+                            </span>
+                            Shop Now</a>
+                    </div>
+                </div>
+            </div>
+            <div class="product-wrapper-data">
+                <h6 class="product-title">
+                    <a href="#">
+                        Nike Sportsware
+                    </a>   
+                </h6>
+                <div class="pricing-wrapper">
+                    <span class="category">
+                        Sports
+                    </span>
+                    <span class="price">
+                        $55.85
+                    </span>
+                </div>
+            </div>
+        </div>
+        <!-- product -->
+        </div>
+    </div>
+    <!-- products -->
+
+    <footer class="footer-wrapper my-5">
+        <div class="container-xxl">
+            <div class="row max-1320">
+                <div class="col-40 col-md-6 col-sm-12">
+                    <div class="wrapper-first-col-footer">
+                        <div class="wrapper-logo-footer">
+                            <img src="assets/footer-logo.png" alt="">
+                        </div>
+                        <div class="wrapper-footer-desc">
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur adipiscing
+                                elit, sed do eiusmod tempor incididunt ut labore et
+                                dolore magna aliqua
+                            </p>
+                        </div>
+                        <div class="wrapper-social-links">
+                            <a href="#" class="facebook-footer">
+                                <i class="fa fa-facebook" aria-hidden="true"></i>
+                            </a>
+                            <a href="#" class="facebook-footer">
+                                <i class="fa fa-twitter" aria-hidden="true"></i>
+                            </a>
+                            <a href="#" class="facebook-footer">
+                                <i class="fa fa-linkedin" aria-hidden="true"></i>
+                            </a>
+                            <a href="#" class="facebook-footer">
+                                <i class="fa fa-instagram" aria-hidden="true"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-20 col-md-6 col-sm-12">
+                    <div class="footer-heading">CATALOG</div>
+                    <ul class="footer-ul">
+                        <li class="footer-li"><a href="#" class="footer-a">hoodies</a></li>
+                        <li class="footer-li"><a href="#" class="footer-a">hoodies</a></li>
+                        <li class="footer-li"><a href="#" class="footer-a">hoodies</a></li>
+                        <li class="footer-li"><a href="#" class="footer-a">hoodies</a></li>
+                        <li class="footer-li"><a href="#" class="footer-a">hoodies</a></li>
+                    </ul>
+                </div>
+                <div class="col-20 col-md-6 col-sm-12">
+                    <div class="footer-heading">CATALOG</div>
+                    <ul class="footer-ul">
+                        <li class="footer-li"><a href="#" class="footer-a">hoodies</a></li>
+                        <li class="footer-li"><a href="#" class="footer-a">hoodies</a></li>
+                        <li class="footer-li"><a href="#" class="footer-a">hoodies</a></li>
+                        <li class="footer-li"><a href="#" class="footer-a">hoodies</a></li>
+                        <li class="footer-li"><a href="#" class="footer-a">hoodies</a></li>
+                    </ul>
+                </div>
+                <div class="col-20 col-md-6 col-sm-12">
+                    <div class="footer-heading">CATALOG</div>
+                    <ul class="footer-ul">
+                        <li class="footer-li"><a href="#" class="footer-a">hoodies</a></li>
+                        <li class="footer-li"><a href="#" class="footer-a">hoodies</a></li>
+                        <li class="footer-li"><a href="#" class="footer-a">hoodies</a></li>
+                        <li class="footer-li"><a href="#" class="footer-a">hoodies</a></li>
+                        <li class="footer-li"><a href="#" class="footer-a">hoodies</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
