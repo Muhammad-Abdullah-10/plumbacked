@@ -31,16 +31,20 @@
                 </div>
             </div>
             <div class="col-20 col-md-6 col-sm-12">
-                {% for footermenu in linklists[section.settings.footer-menu-one].links %}
+                {% assign footer_menu_handle = section.settings.footer-menu-one %}
+                {% if  linklists[footer_menu_handle]  %}
                     <div class="footer-heading"> {{ section.settings.footer-menu-one.title }} </div>
                     <ul class="footer-ul">
+                        {% for footermenu in linklists[footer_menu_handle].links %}
                         <li class="footer-li"><a href="{{ footermenu.url  }}" class="footer-a">{{  footermenu.title }}</a></li>
+                    {% endfor %}
                         {% comment %} <li class="footer-li"><a href="#" class="footer-a">hoodies</a></li>
                         <li class="footer-li"><a href="#" class="footer-a">hoodies</a></li>
                         <li class="footer-li"><a href="#" class="footer-a">hoodies</a></li>
                         <li class="footer-li"><a href="#" class="footer-a">hoodies</a></li> {% endcomment %}
                     </ul>    
-                {% endfor %}
+                {% endif %}
+                
                 
             </div>
             <div class="col-20 col-md-6 col-sm-12">
