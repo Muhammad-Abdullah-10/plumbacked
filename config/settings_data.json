@@ -14,7 +14,8 @@
         "type": "header",
         "settings": {
           "mobile_menu_title": "",
-          "menu": "main-menu"
+          "menu": "main-menu",
+          "header_logo": "shopify:\/\/shop_images\/logo.png"
         }
       }
     },
