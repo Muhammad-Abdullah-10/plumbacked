@@ -26,7 +26,7 @@
           href="{{ shop.url }}"
           >
           {% if section.settings.header_logo != blank %}
-            <img src="{{ sections.settings.header_logo | img_url: '200x' |   }}" alt="{{ section.settings.header_logo  }}">
+            <img src="{{ section.settings.header_logo | img_url: '200x' |   }}" alt="" />
           {% else %}
             <a class=" text-decoration-none text-black-50" href="{{ shop.url }}">
               {{ section.settings.mobile_menu_title }}
