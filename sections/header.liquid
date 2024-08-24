@@ -65,12 +65,14 @@
         <div class="col-12 min-width-1320-px max-1320">
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0 mx-0">
-              <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#"
-                  >Jewelry & Accessories</a
-                >
-              </li>
-              <li class="nav-item">
+                {% for links in main_menu_linklist %}
+                    <li class="nav-item">
+                        <a class="nav-link {% if links.active %} active {% endif %}" aria-current="page" href="{{ links.url }}">
+                            {{  links.title }}
+                        </a>
+                    </li>
+                {% endfor %}  
+              {% comment %} <li class="nav-item">
                 <a class="nav-link" href="#">Clothing & Shoes</a>
               </li>
               <li class="nav-item">
@@ -87,7 +89,7 @@
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="#">Craft Supplies & Tools</a>
-              </li>
+              </li> {% endcomment %}
             </ul>
             <form
               class="d-flex justify-content-center align-items-center dispaly-small-devices-only flex-row-reverse"
