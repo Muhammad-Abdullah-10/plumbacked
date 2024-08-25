@@ -17,6 +17,13 @@
           "menu": "main-menu",
           "header_logo": "shopify:\/\/shop_images\/logo.png"
         }
+      },
+      "footer": {
+        "type": "footer",
+        "settings": {
+          "footer-logo": "shopify:\/\/shop_images\/logo.png",
+          "footer-menu-one": "main-menu"
+        }
       }
     },
     "content_for_index": [
