@@ -24,7 +24,20 @@
             <img src="{{ section.settings.collectionotwo.featured_image |  image_url  }}" alt="" class="sub-img" />
           </div>
           <div class="wrapper-img-sub-grid position-relative">
-            <span class="position-absolute">Sale</span>
+            {% assign on_sale = false %}
+
+            {% for product in section.settings.collectionothree.products %}
+            {% if product.compare_at_price > product.price %}
+                {% assign on_sale = true %}
+                {% break %}
+            {% endif %}
+            {% endfor %}
+            {% if on_sale %}
+                <span class="position-absolute">Sale</span>
+                {% else %}
+                        
+            {% endif %}
+            
             <img src="{{ section.settings.collectionothree.featured_image |  image_url  }}" alt="" class="sub-img" />
           </div>
           <div>
