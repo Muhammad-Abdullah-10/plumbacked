@@ -38,11 +38,22 @@
         "text_zara": "Lustrous yet understated. The new evening wear collection exclusively offered at the reopened Giorgio Armani boutique in Los Angeles.",
         "collection": "frontpage"
       }
+    },
+    "category_gird_section_aykDHB": {
+      "type": "category-gird-section",
+      "settings": {
+        "collectionoone": "dress",
+        "collectionotwo": "dress-floral",
+        "collectionothree": "hoodies",
+        "collectionofour": "jacket",
+        "collectionofive": "t-shirts"
+      }
     }
   },
   "order": [
     "hero-section",
     "client-logo-section",
-    "zara-banner-section"
+    "zara-banner-section",
+    "category_gird_section_aykDHB"
   ]
 }
