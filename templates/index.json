@@ -21,7 +21,7 @@
       }
     },
     "client-logo": {
-      "type": "client-logo",
+      "type": "client-logo-section",
       "settings": {
         "clientlogoone": "shopify:\/\/shop_images\/client-logo.png",
         "clientlogotwo": "shopify:\/\/shop_images\/client-logo.png",
@@ -33,6 +33,6 @@
   },
   "order": [
     "hero-section",
-    "client-logo"
+    "client-logo-section"
   ]
 }
