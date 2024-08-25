@@ -20,7 +20,7 @@
         "bannerimage": "shopify:\/\/shop_images\/image-product.png"
       }
     },
-    "client-logo": {
+    "client-logo-section": {
       "type": "client-logo-section",
       "settings": {
         "clientlogoone": "shopify:\/\/shop_images\/client-logo.png",
