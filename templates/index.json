@@ -32,7 +32,11 @@
     "zara-banner-section": {
       "type": "zara-banner-section",
       "settings": {
-        "zarabanner": "shopify:\/\/shop_images\/zarabg.png"
+        "HeadingBanner": "Or subscribe to the newsletter",
+        "zarabanner": "shopify:\/\/shop_images\/zarabg.png",
+        "logo_banner-right": "shopify:\/\/shop_images\/white-zara.png",
+        "text_zara": "Lustrous yet understated. The new evening wear collection exclusively offered at the reopened Giorgio Armani boutique in Los Angeles.",
+        "collection": "frontpage"
       }
     }
   },
