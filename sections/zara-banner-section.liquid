@@ -6,7 +6,7 @@
   <!-- newsletter -->
   <div class="container max-1320 mx-auto mb-5">
     <div class="row max-1320 justify-content-center mw-100 mx-auto">
-      <h2 class="letter text-center">Or subscribe to the newsletter</h2>
+      <h2 class="letter text-center">{{ section.settings.HeadingBanner }}</h2>
     </div>
   </div>
   <!-- newsletter -->
@@ -17,14 +17,14 @@
     <div class="row max-1320 w-100">
       <div class="col-lg-6"></div>
       <div class="data-wrapper-zara col-lg-6 col-md-12">
-        <img class="logo-zara-data" src="assets/white-zara.png" />
+        <img class="logo-zara-data" src="{{ section.settings.logo_banner-right |  image_url  }}" />
         <p class="zara-desc mb-lg-5 mb-md-3">
-          Lustrous yet understated. The new evening wear collection
-          exclusively offered at the reopened Giorgio Armani boutique in Los
-          Angeles.
+         {{
+            section.settings.text_zara
+         }}
         </p>
         <div class="button-wrapper-collection">
-          <a href="#"> See Collection </a>
+          <a href="{{ section.settings.collection.url }}"> {{ section.settings.collection.title }} </a>
         </div>
       </div>
     </div>
@@ -36,10 +36,32 @@
         "name": "Zara Banner Section",
         "settings": [
             {
+                "type": "text",
+                "id": "HeadingBanner",
+                "label": "Banner Heading Above",
+                "default" : "Or subscribe to the newsletter"
+            }    
+            ,{
                 "type": "image_picker",
                 "id": "zarabanner",
                 "label": "Background Banner"
             },
+            {
+                "type": "image_picker",
+                "id": "logo_banner-right",
+                "label": "Image Main "
+            },
+            {
+                "type": "text",
+                "id": "text_zara",
+                "label": "Paragraph",
+                "default" : "Lustrous yet understated. The new evening wear collection exclusively offered at the reopened Giorgio Armani boutique in Los Angeles."
+            },
+            {
+                "type": "collection",
+                "id": "collection",
+                "label": "Collection Link"
+            }
 
         ],
         "presets": [
