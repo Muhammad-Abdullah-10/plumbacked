@@ -20,8 +20,15 @@
         "bannerimage": "shopify:\/\/shop_images\/image-product.png"
       }
     },
-    "client-logo" :{
-        "type": "client-logo"
+    "client-logo": {
+      "type": "client-logo",
+      "settings": {
+        "clientlogoone": "shopify:\/\/shop_images\/client-logo.png",
+        "clientlogotwo": "shopify:\/\/shop_images\/client-logo.png",
+        "clientlogothree": "shopify:\/\/shop_images\/client-logo.png",
+        "clientlogofour": "shopify:\/\/shop_images\/client-logo.png",
+        "clientlogofive": "shopify:\/\/shop_images\/client-logo.png"
+      }
     }
   },
   "order": [
