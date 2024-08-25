@@ -1,0 +1,51 @@
+  <style>
+    .wrapper-zara{
+        background: {{ section.settings.zarabanner |  image_url  }};
+    }
+  </style>
+  <!-- newsletter -->
+  <div class="container max-1320 mx-auto mb-5">
+    <div class="row max-1320 justify-content-center mw-100 mx-auto">
+      <h2 class="letter text-center">Or subscribe to the newsletter</h2>
+    </div>
+  </div>
+  <!-- newsletter -->
+
+  <!-- zara -->
+  <div class="container-fluid wrapper-zara position-relative my-5 my-md-3">
+    <div class="zara-big-logo position-absolute"></div>
+    <div class="row max-1320 w-100">
+      <div class="col-lg-6"></div>
+      <div class="data-wrapper-zara col-lg-6 col-md-12">
+        <img class="logo-zara-data" src="assets/white-zara.png" />
+        <p class="zara-desc mb-lg-5 mb-md-3">
+          Lustrous yet understated. The new evening wear collection
+          exclusively offered at the reopened Giorgio Armani boutique in Los
+          Angeles.
+        </p>
+        <div class="button-wrapper-collection">
+          <a href="#"> See Collection </a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- zara -->
+
+  {% schema %}
+    {
+        "name": "Zara Banner Section",
+        "settings": [
+            {
+                "type": "image_picker",
+                "id": "zarabanner",
+                "label": "Background Banner"
+            },
+
+        ],
+        "presets": [
+                {
+                    "name": "Zara Banner Section"
+                }
+            ]
+}
+  {% endschema %}

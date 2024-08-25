@@ -29,10 +29,14 @@
         "clientlogofour": "shopify:\/\/shop_images\/client-logo.png",
         "clientlogofive": "shopify:\/\/shop_images\/client-logo.png"
       }
+    },
+    "zara-banner-section" : {
+        "type": "zara-banner-section"
     }
   },
   "order": [
     "hero-section",
-    "client-logo-section"
+    "client-logo-section",
+    "zara-banner-section"
   ]
 }
