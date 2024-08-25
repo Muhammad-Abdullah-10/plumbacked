@@ -3,26 +3,36 @@
     <div class="client-wrapper-logo">
         {% if section.settings.clientlogoone %}
             <img src="{{ section.settings.clientlogoone | image_url }}" alt="" class="client-logo" />            
+            {% else %}
+            <img src="{{ 'placeholder-image.jpg' | asset_url }}" alt="Placeholder Logo 1" class="client-logo" />
         {% endif %}
     </div>
     <div class="client-wrapper-logo">
         {% if section.settings.clientlogotwo %}
-            <img src="{{ section.settings.clientlogotwo | image_url }}" alt="" class="client-logo" />            
+            <img src="{{ section.settings.clientlogotwo | image_url }}" alt="" class="client-logo" /> 
+                {% else %}
+                <img src="{{ 'placeholder-image.jpg' | asset_url }}" alt="Placeholder Logo 1" class="client-logo" />           
         {% endif %}
     </div>
     <div class="client-wrapper-logo">
         {% if section.settings.clientlogothree %}
-            <img src="{{ section.settings.clientlogothree | image_url }}" alt="" class="client-logo" />            
+            <img src="{{ section.settings.clientlogothree | image_url }}" alt="" class="client-logo" /> 
+                {% else %}
+                <img src="{{ 'placeholder-image.jpg' | asset_url }}" alt="Placeholder Logo 1" class="client-logo" />           
         {% endif %}
     </div>
     <div class="client-wrapper-logo">
         {% if section.settings.clientlogofour %}
-            <img src="{{ section.settings.clientlogofour | image_url }}" alt="" class="client-logo" />            
+            <img src="{{ section.settings.clientlogofour | image_url }}" alt="" class="client-logo" /> 
+                {% else %}
+                <img src="{{ 'placeholder-image.jpg' | asset_url }}" alt="Placeholder Logo 1" class="client-logo" />           
         {% endif %}
     </div>
     <div class="client-wrapper-logo">
         {% if section.settings.clientlogofive %}
-            <img src="{{ section.settings.clientlogofive | image_url }}" alt="" class="client-logo" />            
+            <img src="{{ section.settings.clientlogofive | image_url }}" alt="" class="client-logo" /> 
+                {% else %}
+                <img src="{{ 'placeholder-image.jpg' | asset_url }}" alt="Placeholder Logo 1" class="client-logo" />           
         {% endif %}
     </div>
   </div>
