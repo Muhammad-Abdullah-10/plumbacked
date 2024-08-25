@@ -1,0 +1,80 @@
+{% if section.settings.collectionoone.featured_image %}
+    {% assign collectiononeiimg = section.settings.collectionoone |  file_img_url %}
+{% endif %}
+    
+<style>
+    .double-img{
+        background: url({{ collectiononeiimg }});
+    }
+</style>
+
+    <!-- gird category -->
+    <div class="grid-images-wrapper position-relative max-1320 mx-auto my-5">
+      <div class="text-vertical position-absolute"></div>
+      <div class="grid-images">
+        <div class="double-img position-relative">
+          <div class="position-absolute">
+            <span class="left">{{ section.settings.collectionoone.title }}</span>
+            <span class="right">{{ section.settings.collectionoone.products_count }}</span>
+          </div>
+          <img src="assets/double-img.png" alt="" />
+        </div>
+        <div class="sub">
+          <div>
+            <img src="assets/sub01.png" alt="" class="sub-img" />
+          </div>
+          <div class="wrapper-img-sub-grid position-relative">
+            <span class="position-absolute">Sale</span>
+            <img src="assets/sub02.png" alt="" class="sub-img" />
+          </div>
+          <div>
+            <img src="assets/sub03.png" alt="" class="sub-img" />
+          </div>
+          <div>
+            <img src="assets/sub04.png" alt="" class="sub-img" />
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- gird category -->
+
+
+    {% schema %}
+        {   
+            "name" : "Category Section" ,
+            "settings": [
+                {
+                    
+                    "type": "collection",
+                    "id": "collectionoone",
+                    "label": "Add Collection"
+                    },
+                    {
+                    "type": "collection",
+                    "id": "collectionotwo",
+                    "label": "Add Collection"
+                    },
+                    {
+                    "type": "collection",
+                    "id": "collectionothree",
+                    "label": "Add Collection"
+                    },
+                    {
+                    "type": "collection",
+                    "id": "collectionofour",
+                    "label": "Add Collection"
+                    },
+                    {
+                    "type": "collection",
+                    "id": "collectionofive",
+                    "label": "Add Collection"
+                    }
+
+            ],
+            "presets": [
+                {
+                    "name" : "Category Section" ,                    
+                }
+            ]
+        }
+    {% endschema %}
