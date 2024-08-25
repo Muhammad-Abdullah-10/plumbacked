@@ -18,7 +18,12 @@
           </a>
         </div>
         <div class="col-lg-5 col-sm-12 image-banner-r justify-content-center">
-          <img src="{{ section.settings.bannerimage |  image_url }}" alt="" class="banner-img" />
+          {% if section.settings.bannerimage %}
+              <img src="{{ section.settings.bannerimage |  image_url }}" alt="" class="banner-img" />
+              {% else %}
+            <img src="{{ 'placeholder-image.jpg' | asset_url }}" alt="Placeholder Logo 1" class="client-logo" />
+          {% endif %}
+          
         </div>
       </div>
     </div>
