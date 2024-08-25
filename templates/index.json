@@ -19,9 +19,13 @@
         "number_of_products_to_show": 4,
         "bannerimage": "shopify:\/\/shop_images\/image-product.png"
       }
+    },
+    "client-logo" :{
+        "type": "client-logo"
     }
   },
   "order": [
-    "hero-section"
+    "hero-section",
+    "client-logo"
   ]
 }
