@@ -19,7 +19,7 @@
           </a>
         </div>
         <div class="col-lg-5 col-sm-12 image-banner-r justify-content-center">
-          <img src="assets/image-product.png" alt="" class="banner-img" />
+          <img src="{{ section.settings.banner_image |  image_url: width: "auto" }}" alt="" class="banner-img" />
         </div>
       </div>
     </div>
@@ -30,7 +30,9 @@
             "name": "Hero Section",
             "settings": [
                 {
-                    
+                    "type": "image_picker",
+                    "id": "banner_image",
+                    "label": "Banner Image"
                 }
             ]
         }
