@@ -8,18 +8,17 @@
       </div>
       <div class="row align-items-center max-1320 mx-auto">
         <div class="col-lg-7 col-sm-12 text-banner-l my-md-3">
-          <h2 class="banner-heading roboto-medium">Collections</h2>
+          <h2 class="banner-heading roboto-medium">{{  section.settings.title }}</h2>
           <h4 class="banner-subheading">
-            you can explore ans shop many differnt collection from various
-            barands here.
+            {{ section.settings.subtitle }}
           </h4>
           <a class="button-shop-now">
             <i class="fa fa-shopping-bag" aria-hidden="true"></i>
-            Shop Now
+            {{ section.settings.btntxt }}
           </a>
         </div>
         <div class="col-lg-5 col-sm-12 image-banner-r justify-content-center">
-          <img src="{{ section.settings.banner_image |  image_url: width: "auto" }}" alt="" class="banner-img" />
+          <img src="{{ section.settings.bannerimage |  image_url }}" alt="" class="banner-img" />
         </div>
       </div>
     </div>
@@ -30,9 +29,45 @@
             "name": "Hero Section",
             "settings": [
                 {
+                    "type": "text",
+                    "id": "title",
+                    "default": "Banner Title",
+                    "label": "Title"
+                },
+                {
+                    "type": "text",
+                    "id": "subtitle",
+                    "default": "Banner Sub Title",
+                    "label": "Sub Title"
+                },
+                {
+                    "type": "text",
+                    "id": "btntxt",
+                    "default": "Shop Now",
+                    "label": "Button Text"
+                },
+                {
+                    "type": "collection",
+                    "id": "featured_collection",
+                    "label": "Collection"
+                },
+                {
+                    "type": "range",
+                    "id": "number_of_products_to_show",
+                    "min": 4,
+                    "max": 12,
+                    "default": 4,
+                    "label": "Number of products to show"
+                },
+                {
                     "type": "image_picker",
-                    "id": "banner_image",
+                    "id" : "bannerimage" ,
                     "label": "Banner Image"
+                }
+            ],
+            "presets": [
+                {
+                    "name": "Hero Section"
                 }
             ]
         }
