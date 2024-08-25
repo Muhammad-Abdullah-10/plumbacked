@@ -21,17 +21,17 @@
         </div>
         <div class="sub">
           <div>
-            <img src="assets/sub01.png" alt="" class="sub-img" />
+            <img src="{{ section.settings.collectiontwo.featured_image |  image_url  }}" alt="" class="sub-img" />
           </div>
           <div class="wrapper-img-sub-grid position-relative">
             <span class="position-absolute">Sale</span>
-            <img src="assets/sub02.png" alt="" class="sub-img" />
+            <img src="{{ section.settings.collectionthree.featured_image |  image_url  }}" alt="" class="sub-img" />
           </div>
           <div>
-            <img src="assets/sub03.png" alt="" class="sub-img" />
+            <img src="{{ section.settings.collectionfour.featured_image |  image_url  }}" alt="" class="sub-img" />
           </div>
           <div>
-            <img src="assets/sub04.png" alt="" class="sub-img" />
+            <img src="{{ section.settings.collectionfive.featured_image |  image_url  }}" alt="" class="sub-img" />
           </div>
         </div>
       </div>
@@ -41,7 +41,7 @@
 
     {% schema %}
         {   
-            "name" : "Category Section" ,
+            "name" : "Collection Grid" ,
             "settings": [
                 {
                     
@@ -73,7 +73,7 @@
             ],
             "presets": [
                 {
-                    "name" : "Category Section" ,                    
+                    "name" : "Collection Grid" ,                    
                 }
             ]
         }
