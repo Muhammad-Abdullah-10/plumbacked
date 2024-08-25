@@ -9,8 +9,11 @@
 */
 {
   "sections": {
+    "hero-section" :{
+        "type": "hero-section"
+    }
   },
   "order": [
-
+    "hero-section"
   ]
 }
