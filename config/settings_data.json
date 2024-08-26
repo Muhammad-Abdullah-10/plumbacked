@@ -22,7 +22,9 @@
         "type": "footer",
         "settings": {
           "footer-logo": "shopify:\/\/shop_images\/logo.png",
-          "footer-menu-one": "main-menu"
+          "footer-menu-one": "main-menu",
+          "footer-menu-two": "main-menu",
+          "footer-menu-three": "footer"
         }
       }
     },
