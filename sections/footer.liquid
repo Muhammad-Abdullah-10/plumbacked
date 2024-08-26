@@ -50,7 +50,7 @@
             <div class="col-20 col-md-6 col-sm-12">
                 {% assign footer_menu_handle_two = section.settings.footer-menu-two %}
                 {% if  linklists[footer_menu_handle_two]  %}
-                <div class="footer-heading">CATALOG</div>
+                <div class="footer-heading"> {{ section.settings.footer-menu-two.title }} </div>
                 <ul class="footer-ul">
                     {% for footermenu in linklists[footer_menu_handle_two].links %}
                         <li class="footer-li"><a href="{{ footermenu.url  }}" class="footer-a">{{  footermenu.title }}</a></li>
@@ -59,14 +59,15 @@
                 {% endif %}
             </div>
             <div class="col-20 col-md-6 col-sm-12">
-                <div class="footer-heading">CATALOG</div>
+                {% assign footer_menu_handle_three = section.settings.footer-menu-three %}
+                {% if  linklists[footer_menu_handle_three]  %}
+                <div class="footer-heading">{{ section.settings.footer-menu-three.title }} </div>
                 <ul class="footer-ul">
-                    <li class="footer-li"><a href="#" class="footer-a">hoodies</a></li>
-                    <li class="footer-li"><a href="#" class="footer-a">hoodies</a></li>
-                    <li class="footer-li"><a href="#" class="footer-a">hoodies</a></li>
-                    <li class="footer-li"><a href="#" class="footer-a">hoodies</a></li>
-                    <li class="footer-li"><a href="#" class="footer-a">hoodies</a></li>
+                    {% for footermenu in linklists[footer_menu_handle_three].links %}
+                        <li class="footer-li"><a href="{{ footermenu.url  }}" class="footer-a">{{  footermenu.title }}</a></li>
+                    {% endfor %}
                 </ul>
+            {% endif %}
             </div>
         </div>
     </div>
