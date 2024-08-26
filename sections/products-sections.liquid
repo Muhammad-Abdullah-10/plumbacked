@@ -39,7 +39,7 @@
         <br>
         {%  echo products.featured_image %}
         <br>
-        {%  echo products.price | money_with_currency | money_without_trailing_zeros %}
+        {%  echo products.price | money_with_currency %}
         <br>
     {% endfor   %}   
     {%  echo  section.settings.collectiontwo.products %}
