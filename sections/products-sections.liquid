@@ -33,7 +33,10 @@
   </div>
     
     {%  for products in  section.settings.collectionone.products %}
-        {%  echo products %}
+        {%  echo products.title %}
+        {%  echo products.description %}
+        {%  echo products.featured_image %}
+        {%  echo products.price %}
     {% endfor   %}   
     {%  echo  section.settings.collectiontwo.products %}
     {%  echo  section.settings.collectionthree.products %}
