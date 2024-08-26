@@ -3,7 +3,7 @@
     @media (min-width:992px) {
         .prodcuts-wrapper .display-grid {
             grid-template-columns: repeat({{ desktopperrow }}, 1fr);
-            {% if desktopperrow >= 4 %}
+            {% if desktopperrow > 4 %}
                 grid-template-rows: repeat(2, 1fr);
             {% endif %}
             
