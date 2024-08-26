@@ -48,12 +48,23 @@
         "collectionofour": "jacket",
         "collectionofive": "t-shirts"
       }
+    },
+    "products_sections_WUArMg": {
+      "type": "products-sections",
+      "settings": {
+        "numberofproducts": 8,
+        "collectionone": "dress",
+        "collectiontwo": "dress-floral",
+        "collectionthree": "hoodies",
+        "gridHeading": "Best Seller"
+      }
     }
   },
   "order": [
     "hero-section",
     "client-logo-section",
     "zara-banner-section",
-    "category_gird_section_aykDHB"
+    "category_gird_section_aykDHB",
+    "products_sections_WUArMg"
   ]
 }
