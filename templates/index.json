@@ -52,11 +52,10 @@
     "products_sections_WUArMg": {
       "type": "products-sections",
       "settings": {
-        "numberofproducts": 8,
         "collectionone": "dress",
         "collectiontwo": "dress-floral",
         "collectionthree": "hoodies",
-        "gridHeading": "Best Seller"
+        "gridHeading": "Best Sellers"
       }
     }
   },
