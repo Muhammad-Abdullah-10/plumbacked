@@ -48,14 +48,15 @@
                 
             </div>
             <div class="col-20 col-md-6 col-sm-12">
+                {% assign footer_menu_handle_two = section.settings.footer-menu-two %}
+                {% if  linklists[footer_menu_handle_two]  %}
                 <div class="footer-heading">CATALOG</div>
                 <ul class="footer-ul">
-                    <li class="footer-li"><a href="#" class="footer-a">hoodies</a></li>
-                    <li class="footer-li"><a href="#" class="footer-a">hoodies</a></li>
-                    <li class="footer-li"><a href="#" class="footer-a">hoodies</a></li>
-                    <li class="footer-li"><a href="#" class="footer-a">hoodies</a></li>
-                    <li class="footer-li"><a href="#" class="footer-a">hoodies</a></li>
+                    {% for footermenu in linklists[footer_menu_handle_two].links %}
+                        <li class="footer-li"><a href="{{ footermenu.url  }}" class="footer-a">{{  footermenu.title }}</a></li>
+                    {% endfor %}
                 </ul>
+                {% endif %}
             </div>
             <div class="col-20 col-md-6 col-sm-12">
                 <div class="footer-heading">CATALOG</div>
@@ -75,8 +76,7 @@
 {% schema %}
     {   
         "name": "footer",
-        "settings": 
-        [
+        "settings": [
             {
                 "type" : "image_picker",
                 "id" : "footer-logo",
@@ -86,6 +86,18 @@
             "type": "link_list",
             "id": "footer-menu-one",
             "label": "Footer Menu 1",
+            "default": "main-menu"
+            },
+            {
+            "type": "link_list",
+            "id": "footer-menu-two",
+            "label": "Footer Menu 2",
+            "default": "main-menu"
+            },
+            {
+            "type": "link_list",
+            "id": "footer-menu-three",
+            "label": "Footer Menu 3",
             "default": "main-menu"
             }
         ]
