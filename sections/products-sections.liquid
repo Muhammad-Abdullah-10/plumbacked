@@ -39,13 +39,13 @@
         <div class="prodcuts-wrapper container-xxl mb-5 ">
             <div class="row w-100 max-1320 mx-auto display-grid">
                 <!-- product -->
-                 {% for products in section.settings.collectionone %}
+                 {% for product in section.settings.collectionone %}
                     
                  {% endfor %}
                 <div class="product--wrapper position-relative">
                     <div class="product--wrapper-img">
-                        <a href="{{ products.url }}" class="img-wrapper">
-                            <img src="{{ products.featured_image |  image_url }}" alt="" class="product-img">
+                        <a href="{{ product.url }}" class="img-wrapper">
+                            <img src="{{ product.featured_image |  image_url }}" alt="" class="product-img">
                         </a>
                         <div class="shop-bar position-absolute">
                             <div class="w-50">
@@ -57,7 +57,7 @@
                                 </a>
                             </div>
                             <div class="w-50">
-                                <a href="{{ products.url }}" class="shop-now-p">
+                                <a href="{{ product.url }}" class="shop-now-p">
                                     <span class="wrapper-cart-p">
                                         <i class="fa fa-shopping-bag " aria-hidden="true"></i>
                                     </span>
@@ -67,16 +67,16 @@
                     </div>
                     <div class="product-wrapper-data">
                         <h6 class="product-title">
-                            <a href="{{ products.url }}">
-                                {{ products.title }}
+                            <a href="{{ product.url }}">
+                                {{ product.title }}
                             </a>   
                         </h6>
                         <div class="pricing-wrapper">
                             <span class="category">
-                                {{ products.collections.title }}
+                                {{ product }}
                             </span>
                             <span class="price">
-                                {{ products.price |  money }}
+                                {{ product.price |  money }}
                             </span>
                         </div>
                     </div>
