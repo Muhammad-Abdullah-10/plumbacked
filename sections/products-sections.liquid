@@ -31,7 +31,10 @@
       </div>
     </div>
   </div>
-    {%  echo  section.settings.collectionone.products %}
+    
+    {%  for products in  section.settings.collectionone.products %}
+        {%  echo products %}
+    {% endfor   %}   
     {%  echo  section.settings.collectiontwo.products %}
     {%  echo  section.settings.collectionthree.products %}
   <div class="prodcuts-wrapper container-xxl mb-5 ">
