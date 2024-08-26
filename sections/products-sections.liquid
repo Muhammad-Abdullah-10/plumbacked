@@ -136,18 +136,18 @@
   $('.filters a').on('click', function() {
     var collectionHandle = $(this).data('collection-handle');
     var encodedQuery = encodeURIComponent(collectionHandle);
-
-    $.ajax({
-      url: '/collections/' + encodedQuery + '?view=collection-products',
-      type: 'GET',
-      success: function(data) {
-        // $('#product-container').html(data);
-        console.log(data);
-      },
-      error: function(error) {
-        console.error('There was an error loading the products:', error);
-      }
-    });
+    console.log(encodedQuery);
+    // $.ajax({
+    //   url: '/collections/' + encodedQuery + '?view=collection-products',
+    //   type: 'GET',
+    //   success: function(data) {
+    //     // $('#product-container').html(data);
+    //     console.log(data);
+    //   },
+    //   error: function(error) {
+    //     console.error('There was an error loading the products:', error);
+    //   }
+    // });
   });
 });
 {% endjavascript %}
