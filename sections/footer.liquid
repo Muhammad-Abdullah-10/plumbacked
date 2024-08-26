@@ -15,18 +15,26 @@
                         </p>
                     </div>
                     <div class="wrapper-social-links">
-                        <a href="#" class="facebook-footer">
-                            <i class="fa fa-facebook" aria-hidden="true"></i>
-                        </a>
-                        <a href="#" class="facebook-footer">
-                            <i class="fa fa-twitter" aria-hidden="true"></i>
-                        </a>
-                        <a href="#" class="facebook-footer">
-                            <i class="fa fa-linkedin" aria-hidden="true"></i>
-                        </a>
-                        <a href="#" class="facebook-footer">
-                            <i class="fa fa-instagram" aria-hidden="true"></i>
-                        </a>
+                        {% if section.settings.facebookShow %}
+                            <a href="{{ section.settings.facebookfooter }}" class="facebook-footer">
+                                <i class="fa fa-facebook" aria-hidden="true"></i>
+                            </a>    
+                        {% endif %}
+                        {% if section.settings.twitterShow %}
+                            <a href="{{ section.settings.twitterfooter }}" class="facebook-footer">
+                                <i class="fa fa-twitter" aria-hidden="true"></i>
+                            </a>    
+                        {% endif %}
+                        {% if section.settings.linkedinkShow %}
+                            <a href="{{ section.settings.linkedinfooter }}" class="facebook-footer">
+                                <i class="fa fa-linkedin" aria-hidden="true"></i>
+                            </a>
+                        {% endif %}
+                        {% if section.settings.instagramShow %}
+                            <a href="{{ section.settings.instagramfooter }}" class="facebook-footer">
+                                <i class="fa fa-instagram" aria-hidden="true"></i>
+                            </a>
+                        {% endif %}
                     </div>
                 </div>
             </div>
@@ -100,6 +108,50 @@
             "id": "footer-menu-three",
             "label": "Footer Menu 3",
             "default": "main-menu"
+            },
+            {
+                "type": "url",
+                "id": "facebookfooter",
+                "label": "Facebook Link"
+            },
+            {
+                "type": "url",
+                "id": "twitterfooter",
+                "label": "Twitter Link"
+            },
+            {
+                "type": "url",
+                "id": "linkedinfooter",
+                "label": "Linkedin Link"
+            },
+            {
+                "type": "url",
+                "id": "instagramfooter",
+                "label": "Instagram Link"
+            },
+            {
+                "type": "checkbox",
+                "id" : "facebookShow",
+                "label": "Show Facebook Link",
+                "default" : true
+            },
+            {
+                "type": "checkbox",
+                "id" : "twitterShow",
+                "label": "Show Twitter Link",
+                "default" : true
+            },
+            {
+                "type": "checkbox",
+                "id" : "linkedinkShow",
+                "label": "Show Linkedin Link",
+                "default" : true
+            },
+            {
+                "type": "checkbox",
+                "id" : "instagramShow",
+                "label": "Show Instagram Link",
+                "default" : true
             }
         ]
     }
