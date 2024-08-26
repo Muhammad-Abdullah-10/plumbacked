@@ -1,0 +1,48 @@
+<div class="prodcuts-wrapper container-xxl mb-5 ">
+    <div class="row w-100 max-1320 mx-auto display-grid">
+        <!-- product -->
+         {% for product in collection.products %}
+            
+         {% endfor %}
+        <div class="product--wrapper position-relative">
+            <div class="product--wrapper-img">
+                <a href="{{ product.url }}" class="img-wrapper">
+                    <img src="{{ product.featured_image}}" alt="" class="product-img">
+                </a>
+                <div class="shop-bar position-absolute">
+                    <div class="w-50">
+                        <a href="#" class="whislist-wrapper">
+                            <i class="fa fa-heart-o" aria-hidden="true"></i>
+                        </a>
+                        <a href="#" class="search-wrapper-p">
+                            <i class="fa fa-search" aria-hidden="true"></i>
+                        </a>
+                    </div>
+                    <div class="w-50">
+                        <a href="{{ product.url }}" class="shop-now-p">
+                            <span class="wrapper-cart-p">
+                                <i class="fa fa-shopping-bag " aria-hidden="true"></i>
+                            </span>
+                            Shop Now</a>
+                    </div>
+                </div>
+            </div>
+            <div class="product-wrapper-data">
+                <h6 class="product-title">
+                    <a href="{{ product.url }}">
+                        {{ product.title }}
+                    </a>   
+                </h6>
+                <div class="pricing-wrapper">
+                    <span class="category">
+                        {{ product.collections.title }}
+                    </span>
+                    <span class="price">
+                        {{ product.price |  money }}
+                    </span>
+                </div>
+            </div>
+        </div>
+        <!-- product -->
+    </div>
+</div>

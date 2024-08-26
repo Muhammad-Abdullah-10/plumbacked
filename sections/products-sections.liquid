@@ -21,10 +21,10 @@
   <div class="container max-1320 w-100 p-0 filter-wrapper my-md-3 my-lg-5">
     <div class="row max-1320 w-100 filter-row">
       <div class="filters w-50">
-        <a href="{{ shop.url }}" class="filter-name active">All</a>
-        <a href="#" class="filter-name">{{ section.settings.collectionone.title }}</a>
-        <a href="#" class="filter-name">{{ section.settings.collectiontwo.title }}</a>
-        <a href="#" class="filter-name">{{ section.settings.collectionthree.title }}</a>
+        <a href="javascript:void(0)" data-collection-handle="all" class="filter-name active">All</a>
+        <a href="javascript:void(0)" data-collection-handle="{{ section.settings.collectionone.title }}" class="filter-name">{{ section.settings.collectionone.title }}</a>
+        <a href="javascript:void(0)" data-collection-handle="{{ section.settings.collectiontwo.title }}" class="filter-name">{{ section.settings.collectiontwo.title }}</a>
+        <a href="javascript:void(0)" data-collection-handle="{{ section.settings.collectionthree.title }}" class="filter-name">{{ section.settings.collectionthree.title }}</a>
       </div>
       <div class="show-all-button w-50">
         <a href="{{ shop.url }}">Show All</a>
@@ -32,351 +32,14 @@
     </div>
   </div>
     
-    {%  for products in  section.settings.collectionone.products %}
-        {%  echo products.title %}
-        <br>
-        {%  echo products.description %}
-        <br>
-        {%  echo products.featured_image %}
-        <br>
-        {%  echo products.price | money_with_currency %}
-        <br>
-    {% endfor  %}   
-    {%  echo  section.settings.collectiontwo.products %}
-    {%  echo  section.settings.collectionthree.products %}
-  <div class="prodcuts-wrapper container-xxl mb-5 ">
-      <div class="row w-100 max-1320 mx-auto display-grid">
-          <!-- product -->
-          <div class="product--wrapper position-relative">
-              <div class="product--wrapper-img">
-                  <a href="#" class="img-wrapper">
-                      <img src="assets/image-product-1.png" alt="" class="product-img">
-                  </a>
-                  <div class="shop-bar position-absolute">
-                      <div class="w-50">
-                          <a href="#" class="whislist-wrapper">
-                              <i class="fa fa-heart-o" aria-hidden="true"></i>
-                          </a>
-                          <a href="#" class="search-wrapper-p">
-                              <i class="fa fa-search" aria-hidden="true"></i>
-                          </a>
-                      </div>
-                      <div class="w-50">
-                          <a href="#" class="shop-now-p">
-                              <span class="wrapper-cart-p">
-                                  <i class="fa fa-shopping-bag " aria-hidden="true"></i>
-                              </span>
-                              Shop Now</a>
-                      </div>
-                  </div>
-              </div>
-              <div class="product-wrapper-data">
-                  <h6 class="product-title">
-                      <a href="#">
-                          Nike Sportsware
-                      </a>   
-                  </h6>
-                  <div class="pricing-wrapper">
-                      <span class="category">
-                          Sports
-                      </span>
-                      <span class="price">
-                          $55.85
-                      </span>
-                  </div>
-              </div>
-          </div>
-          <!-- product -->
-          <!-- product -->
-          <div class="product--wrapper position-relative">
-              <div class="product--wrapper-img">
-                  <a href="#" class="img-wrapper">
-                      <img src="assets/image-product-1.png" alt="" class="product-img">
-                  </a>
-                  <div class="shop-bar position-absolute">
-                      <div class="w-50">
-                          <a href="#" class="whislist-wrapper">
-                              <i class="fa fa-heart-o" aria-hidden="true"></i>
-                          </a>
-                          <a href="#" class="search-wrapper-p">
-                              <i class="fa fa-search" aria-hidden="true"></i>
-                          </a>
-                      </div>
-                      <div class="w-50">
-                          <a href="#" class="shop-now-p">
-                              <span class="wrapper-cart-p">
-                                  <i class="fa fa-shopping-bag " aria-hidden="true"></i>
-                              </span>
-                              Shop Now</a>
-                      </div>
-                  </div>
-              </div>
-              <div class="product-wrapper-data">
-                  <h6 class="product-title">
-                      <a href="#">
-                          Nike Sportsware
-                      </a>   
-                  </h6>
-                  <div class="pricing-wrapper">
-                      <span class="category">
-                          Sports
-                      </span>
-                      <span class="price">
-                          $55.85
-                      </span>
-                  </div>
-              </div>
-          </div>
-          <!-- product -->
-          <!-- product -->
-          <div class="product--wrapper position-relative">
-              <div class="product--wrapper-img">
-                  <a href="#" class="img-wrapper">
-                      <img src="assets/image-product-1.png" alt="" class="product-img">
-                  </a>
-                  <div class="shop-bar position-absolute">
-                      <div class="w-50">
-                          <a href="#" class="whislist-wrapper">
-                              <i class="fa fa-heart-o" aria-hidden="true"></i>
-                          </a>
-                          <a href="#" class="search-wrapper-p">
-                              <i class="fa fa-search" aria-hidden="true"></i>
-                          </a>
-                      </div>
-                      <div class="w-50">
-                          <a href="#" class="shop-now-p">
-                              <span class="wrapper-cart-p">
-                                  <i class="fa fa-shopping-bag " aria-hidden="true"></i>
-                              </span>
-                              Shop Now</a>
-                      </div>
-                  </div>
-              </div>
-              <div class="product-wrapper-data">
-                  <h6 class="product-title">
-                      <a href="#">
-                          Nike Sportsware
-                      </a>   
-                  </h6>
-                  <div class="pricing-wrapper">
-                      <span class="category">
-                          Sports
-                      </span>
-                      <span class="price">
-                          $55.85
-                      </span>
-                  </div>
-              </div>
-          </div>
-          <!-- product -->
-          <!-- product -->
-          <div class="product--wrapper position-relative">
-              <div class="product--wrapper-img">
-                  <a href="#" class="img-wrapper">
-                      <img src="assets/image-product-1.png" alt="" class="product-img">
-                  </a>
-                  <div class="shop-bar position-absolute">
-                      <div class="w-50">
-                          <a href="#" class="whislist-wrapper">
-                              <i class="fa fa-heart-o" aria-hidden="true"></i>
-                          </a>
-                          <a href="#" class="search-wrapper-p">
-                              <i class="fa fa-search" aria-hidden="true"></i>
-                          </a>
-                      </div>
-                      <div class="w-50">
-                          <a href="#" class="shop-now-p">
-                              <span class="wrapper-cart-p">
-                                  <i class="fa fa-shopping-bag " aria-hidden="true"></i>
-                              </span>
-                              Shop Now</a>
-                      </div>
-                  </div>
-              </div>
-              <div class="product-wrapper-data">
-                  <h6 class="product-title">
-                      <a href="#">
-                          Nike Sportsware
-                      </a>   
-                  </h6>
-                  <div class="pricing-wrapper">
-                      <span class="category">
-                          Sports
-                      </span>
-                      <span class="price">
-                          $55.85
-                      </span>
-                  </div>
-              </div>
-          </div>
-          <!-- product -->
-         <!-- product -->
-         <div class="product--wrapper position-relative">
-          <div class="product--wrapper-img">
-              <a href="#" class="img-wrapper">
-                  <img src="assets/image-product-1.png" alt="" class="product-img">
-              </a>
-              <div class="shop-bar position-absolute">
-                      <div class="w-50">
-                          <a href="#" class="whislist-wrapper">
-                              <i class="fa fa-heart-o" aria-hidden="true"></i>
-                          </a>
-                          <a href="#" class="search-wrapper-p">
-                              <i class="fa fa-search" aria-hidden="true"></i>
-                          </a>
-                      </div>
-                      <div class="w-50">
-                          <a href="#" class="shop-now-p">
-                              <span class="wrapper-cart-p">
-                                  <i class="fa fa-shopping-bag " aria-hidden="true"></i>
-                              </span>
-                              Shop Now</a>
-                      </div>
-                  </div>
-          </div>
-          <div class="product-wrapper-data">
-              <h6 class="product-title">
-                  <a href="#">
-                      Nike Sportsware
-                  </a>   
-              </h6>
-              <div class="pricing-wrapper">
-                  <span class="category">
-                      Sports
-                  </span>
-                  <span class="price">
-                      $55.85
-                  </span>
-              </div>
-          </div>
-      </div>
-      <!-- product -->
-       <!-- product -->
-       <div class="product--wrapper position-relative">
-          <div class="product--wrapper-img">
-              <a href="#" class="img-wrapper">
-                  <img src="assets/image-product-1.png" alt="" class="product-img">
-              </a>
-              <div class="shop-bar position-absolute">
-                      <div class="w-50">
-                          <a href="#" class="whislist-wrapper">
-                              <i class="fa fa-heart-o" aria-hidden="true"></i>
-                          </a>
-                          <a href="#" class="search-wrapper-p">
-                              <i class="fa fa-search" aria-hidden="true"></i>
-                          </a>
-                      </div>
-                      <div class="w-50">
-                          <a href="#" class="shop-now-p">
-                              <span class="wrapper-cart-p">
-                                  <i class="fa fa-shopping-bag " aria-hidden="true"></i>
-                              </span>
-                              Shop Now</a>
-                      </div>
-                  </div>
-          </div>
-          <div class="product-wrapper-data">
-              <h6 class="product-title">
-                  <a href="#">
-                      Nike Sportsware
-                  </a>   
-              </h6>
-              <div class="pricing-wrapper">
-                  <span class="category">
-                      Sports
-                  </span>
-                  <span class="price">
-                      $55.85
-                  </span>
-              </div>
-          </div>
-      </div>
-      <!-- product -->
-       <!-- product -->
-       <div class="product--wrapper position-relative">
-          <div class="product--wrapper-img">
-              <a href="#" class="img-wrapper">
-                  <img src="assets/image-product-1.png" alt="" class="product-img">
-              </a>
-              <div class="shop-bar position-absolute">
-                      <div class="w-50">
-                          <a href="#" class="whislist-wrapper">
-                              <i class="fa fa-heart-o" aria-hidden="true"></i>
-                          </a>
-                          <a href="#" class="search-wrapper-p">
-                              <i class="fa fa-search" aria-hidden="true"></i>
-                          </a>
-                      </div>
-                      <div class="w-50">
-                          <a href="#" class="shop-now-p">
-                              <span class="wrapper-cart-p">
-                                  <i class="fa fa-shopping-bag " aria-hidden="true"></i>
-                              </span>
-                              Shop Now</a>
-                      </div>
-                  </div>
-          </div>
-          <div class="product-wrapper-data">
-              <h6 class="product-title">
-                  <a href="#">
-                      Nike Sportsware
-                  </a>   
-              </h6>
-              <div class="pricing-wrapper">
-                  <span class="category">
-                      Sports
-                  </span>
-                  <span class="price">
-                      $55.85
-                  </span>
-              </div>
-          </div>
-      </div>
-      <!-- product -->
-        <!-- product -->
-        <div class="product--wrapper position-relative">
-          <div class="product--wrapper-img">
-              <a href="#" class="img-wrapper">
-                  <img src="assets/image-product-1.png" alt="" class="product-img">
-              </a>
-              <div class="shop-bar position-absolute">
-                  <div class="w-50">
-                      <a href="#" class="whislist-wrapper">
-                          <i class="fa fa-heart-o" aria-hidden="true"></i>
-                      </a>
-                      <a href="#" class="search-wrapper-p">
-                          <i class="fa fa-search" aria-hidden="true"></i>
-                      </a>
-                  </div>
-                  <div class="w-50">
-                      <a href="#" class="shop-now-p">
-                          <span class="wrapper-cart-p">
-                              <i class="fa fa-shopping-bag " aria-hidden="true"></i>
-                          </span>
-                          Shop Now</a>
-                  </div>
-              </div>
-          </div>
-          <div class="product-wrapper-data">
-              <h6 class="product-title">
-                  <a href="#">
-                      Nike Sportsware
-                  </a>   
-              </h6>
-              <div class="pricing-wrapper">
-                  <span class="category">
-                      Sports
-                  </span>
-                  <span class="price">
-                      $55.85
-                  </span>
-              </div>
-          </div>
-      </div>
-      <!-- product -->
-      </div>
-  </div>
-  <!-- products -->
+ 
+    
+    <!-- products -->
+    <div id="product-container">
+        {% comment %} {% assign collection = collections[section.settings.all_products] %} {% endcomment %}
+        {% render 'collection-products' %}
+      </div> 
+    <!-- products -->
 
   {% schema %}
   {
@@ -421,3 +84,22 @@
     ]
   }
   {% endschema %}
+
+{% javascript %}
+    $(document).ready(function() {
+      $('.filters a').on('click', function() {
+        var collectionHandle = $(this).data('collection-handle');
+    
+        $.ajax({
+          url: '/collections/' + collectionHandle + '?view=collection-products',
+          type: 'GET',
+          success: function(data) {
+            $('#product-container').html(data);
+          },
+          error: function(error) {
+            console.error('There was an error loading the products:', error);
+          }
+        });
+      });
+    });
+{% endjavascript %}
