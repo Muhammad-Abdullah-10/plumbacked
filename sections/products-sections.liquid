@@ -39,7 +39,7 @@
         <div class="prodcuts-wrapper container-xxl mb-5 ">
             <div class="row w-100 max-1320 mx-auto display-grid">
                 <!-- product -->
-                 {% for product in collection.products %}
+                 {% for product in section.settings.collectionone %}
                     
                  {% endfor %}
                 <div class="product--wrapper position-relative">
@@ -91,14 +91,7 @@
   {
     "name": "Products Grid",
     "settings": [
-        {
-            "type": "range",
-            "id": "numberofproducts",
-            "min": 4,
-            "max": 8,
-            "label": "Products to Show",
-            "default": 4
-         },
+
          {
             "type": "collection",
             "id": "collectionone",
@@ -131,23 +124,3 @@
   }
   {% endschema %}
 
-{% javascript %}
-  $(document).ready(function() {
-  $('.filters a').on('click', function() {
-    var collectionHandle = $(this).data('collection-handle');
-    var encodedQuery = encodeURIComponent(collectionHandle);
-    console.log(encodedQuery);
-    // $.ajax({
-    //   url: '/collections/' + encodedQuery + '?view=collection-products',
-    //   type: 'GET',
-    //   success: function(data) {
-    //     // $('#product-container').html(data);
-    //     console.log(data);
-    //   },
-    //   error: function(error) {
-    //     console.error('There was an error loading the products:', error);
-    //   }
-    // });
-  });
-});
-{% endjavascript %}
