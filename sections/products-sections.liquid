@@ -135,9 +135,10 @@
   $(document).ready(function() {
   $('.filters a').on('click', function() {
     var collectionHandle = $(this).data('collection-handle');
+    var encodedQuery = encodeURIComponent(collectionHandle);
 
     $.ajax({
-      url: '/collections/' + collectionHandle + '?view=collection-products',
+      url: '/collections/' + encodedQuery + '?view=collection-products',
       type: 'GET',
       success: function(data) {
         // $('#product-container').html(data);
