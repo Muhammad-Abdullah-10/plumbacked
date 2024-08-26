@@ -140,7 +140,8 @@
       url: '/collections/' + collectionHandle + '?view=collection-products',
       type: 'GET',
       success: function(data) {
-        $('#product-container').html(data);
+        // $('#product-container').html(data);
+        console.log(data);
       },
       error: function(error) {
         console.error('There was an error loading the products:', error);
