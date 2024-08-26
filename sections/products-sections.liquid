@@ -1,4 +1,17 @@
-  <!-- products -->
+{% assign desktopperrow = section.settings.numberofproducts %}
+<style>
+    @media (min-width:992px) {
+        .prodcuts-wrapper .display-grid {
+            grid-template-columns: repeat({{ desktopperrow }}, 1fr);
+            {% if desktopperrow >= 4 %}
+                grid-template-rows: repeat(2, 1fr);
+            {% endif %}
+            
+        }
+    }
+</style>
+<!-- products -->
+
   <div class="container max-1320 w-100 p-0 best-seller-wrapper">
     <div class="row max-1320 w-100">
       <h2 class="best-seller text-center">{{ section.settings.gridHeading }}</h2>
