@@ -34,9 +34,13 @@
     
     {%  for products in  section.settings.collectionone.products %}
         {%  echo products.title %}
+        <br>
         {%  echo products.description %}
+        <br>
         {%  echo products.featured_image %}
+        <br>
         {%  echo products.price %}
+        <br>
     {% endfor   %}   
     {%  echo  section.settings.collectiontwo.products %}
     {%  echo  section.settings.collectionthree.products %}
