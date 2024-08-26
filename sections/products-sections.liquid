@@ -1,15 +1,15 @@
-{% assign desktopperrow = section.settings.numberofproducts %}
+{% comment %} {% assign desktopperrow = section.settings.numberofproducts %}
 <style>
     @media (min-width:992px) {
         .prodcuts-wrapper .display-grid {
-            grid-template-columns: repeat({{ desktopperrow }}, 1fr);
+            grid-template-columns: repeat( 4, 1fr);
             {% if desktopperrow > 4 %}
                 grid-template-rows: repeat(2, 1fr);
             {% endif %}
             
         }
     }
-</style>
+</style> {% endcomment %}
 <!-- products -->
 
   <div class="container max-1320 w-100 p-0 best-seller-wrapper">
@@ -31,7 +31,7 @@
       </div>
     </div>
   </div>
-
+    {%  echo  section.settings.collectionone %}
   <div class="prodcuts-wrapper container-xxl mb-5 ">
       <div class="row w-100 max-1320 mx-auto display-grid">
           <!-- product -->
