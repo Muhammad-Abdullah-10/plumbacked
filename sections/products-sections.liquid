@@ -132,5 +132,20 @@
   {% endschema %}
 
 {% javascript %}
-  
+  $(document).ready(function() {
+  $('.filters a').on('click', function() {
+    var collectionHandle = $(this).data('collection-handle');
+
+    $.ajax({
+      url: '/collections/' + collectionHandle + '?view=collection-products',
+      type: 'GET',
+      success: function(data) {
+        $('#product-container').html(data);
+      },
+      error: function(error) {
+        console.error('There was an error loading the products:', error);
+      }
+    });
+  });
+});
 {% endjavascript %}
