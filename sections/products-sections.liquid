@@ -131,7 +131,7 @@
       var collectionHandle = $(this).data('collection-handle');
       var collectionIdGet = $(this).data('collection-id');
       var encodedQuery = encodeURIComponent(collectionHandle);
-      console.log(collectionId);
+    //   console.log(collectionIdGet);
       $.ajax({
         url: '/admin/api/2024-07/collections/' + collectionIdGet + 'products.json',
         type: 'GET',
