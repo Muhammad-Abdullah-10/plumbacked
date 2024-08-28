@@ -22,9 +22,9 @@
     <div class="row max-1320 w-100 filter-row">
       <div class="filters w-50">
         <a href="javascript:void(0)" data-collection-handle="all" class="filter-name active">All</a>
-        <a href="javascript:void(0)" data-collection-handle="{{ section.settings.collectionone }}" class="filter-name">{{ section.settings.collectionone.title }}</a>
-        <a href="javascript:void(0)" data-collection-handle="{{ section.settings.collectiontwo }}" class="filter-name">{{ section.settings.collectiontwo.title }}</a>
-        <a href="javascript:void(0)" data-collection-handle="{{ section.settings.collectionthree }}" class="filter-name">{{ section.settings.collectionthree.title }}</a>
+        <a href="javascript:void(0)" data-collection-id="{{ section.settings.collectionone.id }}" data-collection-handle="{{ section.settings.collectionone }}" class="filter-name">{{ section.settings.collectionone.title }}</a>
+        <a href="javascript:void(0)" data-collection-id="{{ section.settings.collectiontwo.id }}" data-collection-handle="{{ section.settings.collectiontwo }}" class="filter-name">{{ section.settings.collectiontwo.title }}</a>
+        <a href="javascript:void(0)" data-collection-id="{{ section.settings.collectionthree.id }}" data-collection-handle="{{ section.settings.collectionthree }}" class="filter-name">{{ section.settings.collectionthree.title }}</a>
       </div>
       <div class="show-all-button w-50">
         <a href="{{ shop.url }}">Show All</a>
@@ -43,7 +43,7 @@
                     <div class="product--wrapper position-relative">
                         <div class="product--wrapper-img">
                             <a href="{{ product.url }}" class="img-wrapper">
-                                <img src="{{ product.featured_image | img_url: '300x' }}" alt="" class="product-img">
+                                <img src="{{ product.featured_image | img_url }}" alt="" class="product-img">
 
                             </a>
                             <div class="shop-bar position-absolute">
