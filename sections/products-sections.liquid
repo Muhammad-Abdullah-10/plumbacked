@@ -131,6 +131,7 @@
       var collectionHandle = $(this).data('collection-handle');
       var collectionIdGet = $(this).data('collection-id');
       var encodedQuery = encodeURIComponent(collectionHandle);
+<<<<<<< HEAD
     //   console.log(collectionIdGet);
     //   $.ajax({
     //     url: '/admin/api/2024-07/collections/' + collectionIdGet + '/products.json',
@@ -153,6 +154,20 @@
     $.ajax(settings).done(function (response) {
     console.log(response);
     });
+=======
+      console.log(collectionId);
+      $.ajax({
+        url: '/admin/api/2024-07/collections/' + collectionIdGet + 'products.json',
+        type: 'GET',
+        success: function(data) {
+          // $('#product-container').html(data);
+          console.log(data);
+        },
+        error: function(error) {
+          console.error('There was an error loading the products:', error);
+        }
+      });
+>>>>>>> parent of 02f172b (Collection id js ajax)
     });
   });
   {% endjavascript %}
