@@ -133,7 +133,7 @@
       var encodedQuery = encodeURIComponent(collectionHandle);
     //   console.log(collectionIdGet);
       $.ajax({
-        url: '/admin/api/2024-07/collections/' + collectionIdGet + 'products.json',
+        url: '/admin/api/2024-07/collections/' + collectionIdGet + '/products.json',
         type: 'GET',
         success: function(data) {
           // $('#product-container').html(data);
