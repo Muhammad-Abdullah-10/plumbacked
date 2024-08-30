@@ -155,9 +155,13 @@
     // });
      $('.filters a').on('click', function() {
         var collectionHandle = $(this).data('collection-handle');
-        var encodedQuery = encodeURIComponent(collectionHandle)
+        // var encodedQuery = encodeURIComponent(collectionHandle)
+        var encodedQuery;
         if( $(this).data('collection-handle') == 'all'){
-            console.log(collectionHandle);
+            var encodedQuery = 'all'
+        }
+        else {
+            var encodedQuery = encodeURIComponent(collectionHandle)
         }
         
         const query = `{
