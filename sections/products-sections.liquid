@@ -160,10 +160,12 @@
         
         var encodedQuery;
         if( $(this).data('collection-handle') == 'all'){
-            
-            var getAllCollections =  "{{ section.settings.collectionone.id  }}" +  "{{ section.settings.collectiontwo.id  }}" + "{{ section.settings.collectionthree.id }}" ;
+            var collectionOneHandle = "{{ section.settings.collectionone.handle }}";
+            var collectionTwoHandle = "{{ section.settings.collectiontwo.handle }}";
+            var collectionThreeHandle = "{{ section.settings.collectionthree.handle }}";
+            var getAllCollections = collectionOneHandle + "," + collectionTwoHandle + "," + collectionThreeHandle;
             console.log(getAllCollections);
-            
+
         }
         else {
             var encodedQuery = encodeURIComponent(collectionHandle)
