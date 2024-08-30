@@ -155,9 +155,14 @@
     // });
      $('.filters a').on('click', function() {
         var collectionHandle = $(this).data('collection-handle');
+        if(collectionHandle.val() == 'all'){
+            console.log(collectionHandle);
+        }
         var encodedQuery = encodeURIComponent(collectionHandle)
-        console.log(collectionHandle);
+        
         const query = `{
+            if(){
+            }
             collectionByHandle(handle: "${encodedQuery}") {
                 title
                 products(first: 10) {
