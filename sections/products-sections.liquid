@@ -156,16 +156,12 @@
      $('.filters a').on('click', function() {
         var collectionHandle = $(this).data('collection-handle');
         // var encodedQuery = encodeURIComponent(collectionHandle)
+        var encodedQuery ;
         console.log(collectionHandle);
         
         var encodedQuery;
         if( $(this).data('collection-handle') == 'all'){
-            var collectionOneHandle = "{% echo {{ section.settings.collectionone.handle }} %}";
-            var collectionTwoHandle = "{% echo {{ section.settings.collectiontwo.handle }} %}";
-            var collectionThreeHandle = "{% echo {{ section.settings.collectionthree.handle }} %}";
-            var getAllCollections = collectionOneHandle + "," + collectionTwoHandle + "," + collectionThreeHandle;
-            console.log(getAllCollections);
-
+            var encodedQuery = encodeURIComponent('all');
         }
         else {
             var encodedQuery = encodeURIComponent(collectionHandle)
