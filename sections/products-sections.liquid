@@ -156,6 +156,7 @@
      $('.filters a').on('click', function() {
         var collectionHandle = $(this).data('collection-handle');
         var encodedQuery = encodeURIComponent(collectionHandle)
+        console.log(collectionHandle);
         const query = `{
             collectionByHandle(handle: "${encodedQuery}") {
                 title
