@@ -190,7 +190,7 @@
     // .catch(error => console.log('There is error in code ' , error));
     // working
 
-    async function getQuery(url = 'https://taskplum.myshopify.com/api/2024-07/graphql' , data = {} ) {
+    async function getQuery(url = 'https://taskplum.myshopify.com/api/2024-07/graphql' , query ) {
         try {
             const response = await fetch(url , {
             method : 'POST' , 
@@ -198,7 +198,7 @@
                 'Content-Type' : 'application/json',
                 'X-Shopify-Storefront-Access-Token' : 'f3bd5a295047ba2d5ca308f7f40efffb', 
             },
-            body : JSON.stringify(data)
+            body : JSON.stringify(query)
         });
         if (!response.ok) {
             throw new Error(`HTTP ERRRO : ${response.error}`);
