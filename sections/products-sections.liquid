@@ -156,6 +156,8 @@
      $('.filters a').on('click', function() {
         var collectionHandle = $(this).data('collection-handle');
         // var encodedQuery = encodeURIComponent(collectionHandle)
+        console.log(collectionHandle);
+        
         var encodedQuery;
         if( $(this).data('collection-handle') == 'all'){
             
