@@ -127,31 +127,53 @@
 
 {% javascript %}
     $(document).ready(function() {
-    $('.filters a').on('click', function() {
-      var collectionHandle = $(this).data('collection-handle');
-      var collectionIdGet = $(this).data('collection-id');
-      var encodedQuery = encodeURIComponent(collectionHandle);
+    // $('.filters a').on('click', function() {
+    //   var collectionHandle = $(this).data('collection-handle');
+    //   var collectionIdGet = $(this).data('collection-id');
+    //   var encodedQuery = encodeURIComponent(collectionHandle);
 
-      console.log(collectionIdGet);
-      var url = "https://taskplum.myshopify.com/admin/api/2024-07/" + collectionIdGet + "/products.json";
+    //   console.log(collectionIdGet);
+    //   var url = "https://taskplum.myshopify.com/admin/api/2024-07/" + collectionIdGet + "/products.json";
 
-      var settings = {
-          url: url,
-          method: "GET",
-          timeout: 0,
-          headers: {
-              "X-Shopify-Access-Token": "f3bd5a295047ba2d5ca308f7f40efffb"
-          }
-      };
+    //   var settings = {
+    //       url: url,
+    //       method: "GET",
+    //       timeout: 0,
+    //       headers: {
+    //           "X-Shopify-Access-Token": "f3bd5a295047ba2d5ca308f7f40efffb"
+    //       }
+    //   };
 
-      $.ajax(settings)
-          .done(function (response) {
-              console.log(response);
-          })
-          .fail(function (jqXHR, textStatus, errorThrown) {
-              console.error("Request failed: " + textStatus + ", " + errorThrown);
-      });
+    //   $.ajax(settings)
+    //       .done(function (response) {
+    //           console.log(response);
+    //       })
+    //       .fail(function (jqXHR, textStatus, errorThrown) {
+    //           console.error("Request failed: " + textStatus + ", " + errorThrown);
+    //   });
+
+    // });
+    const query = `{
+    products(first: 10) {
+        edges {
+        node {
+            title
+            handle
+        }
+        }
+    }
+    }`;
+
+    fetch('https://taskplum.myshopify.com/api/2024-07/graphql', {
+    method: 'POST',
+    headers: {
+        'Content-Type': 'application/json',
+        'X-Shopify-Storefront-Access-Token': 'f3bd5a295047ba2d5ca308f7f40efffb',
+    },
+    body: JSON.stringify({ query }),
+    })
+    .then(response => response.json())
+    .then(data => console.log(data));
 
     });
-  });
   {% endjavascript %}
