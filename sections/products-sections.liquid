@@ -155,30 +155,30 @@
     // });
      $('.filters a').on('click', function() {
         var collectionHandle = $(this).data('collection-handle');
-    var encodedQuery = encodeURIComponent(collectionHandle)
-    const query = `{
-        collectionByHandle(handle: "${encodedQuery}") {
-            title
-            products(first: 10) {
-                edges {
-                    node {
-                        id
-                        title
-                        handle
-                        priceRange {
-                            minVariantPrice {
-                                amount
-                                currencyCode
+        var encodedQuery = encodeURIComponent(collectionHandle)
+        const query = `{
+            collectionByHandle(handle: "${encodedQuery}") {
+                title
+                products(first: 10) {
+                    edges {
+                        node {
+                            id
+                            title
+                            handle
+                            priceRange {
+                                minVariantPrice {
+                                    amount
+                                    currencyCode
+                                }
                             }
                         }
                     }
                 }
             }
-        }
-    }`;
+        }`;
 
     fetch('https://taskplum.myshopify.com/api/2024-07/graphql', {
-    method: 'POST',
+    method: 'GET',
     headers: {
         'Content-Type': 'application/json',
         'X-Shopify-Storefront-Access-Token': 'f3bd5a295047ba2d5ca308f7f40efffb',
