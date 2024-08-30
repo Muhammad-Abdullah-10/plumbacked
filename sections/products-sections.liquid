@@ -155,7 +155,7 @@
     // });
      $('.filters a').on('click', function() {
         var collectionHandle = $(this).data('collection-handle');
-        if(collectionHandle.val() == 'all'){
+        if(collectionHandle.value == 'all'){
             console.log(collectionHandle);
         }
         var encodedQuery = encodeURIComponent(collectionHandle)
