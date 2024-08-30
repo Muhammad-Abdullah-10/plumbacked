@@ -154,14 +154,24 @@
 
     // });
     const query = `{
-    products(first: 10) {
-        edges {
-        node {
+        collectionByHandle(handle: "${encodedQuery}") {
             title
-            handle
+            products(first: 10) {
+                edges {
+                    node {
+                        id
+                        title
+                        handle
+                        priceRange {
+                            minVariantPrice {
+                                amount
+                                currencyCode
+                            }
+                        }
+                    }
+                }
+            }
         }
-        }
-    }
     }`;
 
     fetch('https://taskplum.myshopify.com/api/2024-07/graphql', {
