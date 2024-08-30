@@ -191,7 +191,8 @@
     // working
 
     async function getQuery(url = 'https://taskplum.myshopify.com/api/2024-07/graphql' , data = {} ) {
-        const response = await fetch(url , {
+        try {
+            const response = await fetch(url , {
             method : 'POST' , 
             headers : {
                 'Content-Type' : 'application/json',
@@ -199,8 +200,18 @@
             },
             body : JSON.stringify(data)
         });
+        if (!response.ok) {
+            throw new Error(`HTTP ERRRO : ${response.error}`);
+            
+        }
+        const results = await response.json();
+        return results ;
 
-        return response.json();
+        } 
+        catch (error) {
+            console.log("Error " , error);
+        }
+        
     }
     getQuery();
      });
