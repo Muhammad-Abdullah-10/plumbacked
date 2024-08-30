@@ -198,7 +198,7 @@
                 'Content-Type' : 'application/json',
                 'X-Shopify-Storefront-Access-Token' : 'f3bd5a295047ba2d5ca308f7f40efffb', 
             },
-            body : JSON.stringify({ query })
+            body : JSON.stringify(query)
         });
         if (!response.ok) {
             throw new Error(`HTTP ERRRO : ${response.error}`);
@@ -214,7 +214,7 @@
         }
         
     }
-    getQuery(query);
+    getQuery();
      });
     
 
