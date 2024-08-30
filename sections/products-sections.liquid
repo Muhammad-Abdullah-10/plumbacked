@@ -160,9 +160,9 @@
         
         var encodedQuery;
         if( $(this).data('collection-handle') == 'all'){
-            var collectionOneHandle = "{{ section.settings.collectionone.handle }}";
-            var collectionTwoHandle = "{{ section.settings.collectiontwo.handle }}";
-            var collectionThreeHandle = "{{ section.settings.collectionthree.handle }}";
+            var collectionOneHandle = "{% echo {{ section.settings.collectionone.handle }} %}";
+            var collectionTwoHandle = "{% echo {{ section.settings.collectiontwo.handle }} %}";
+            var collectionThreeHandle = "{% echo {{ section.settings.collectionthree.handle }} %}";
             var getAllCollections = collectionOneHandle + "," + collectionTwoHandle + "," + collectionThreeHandle;
             console.log(getAllCollections);
 
