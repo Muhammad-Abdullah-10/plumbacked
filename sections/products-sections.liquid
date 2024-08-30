@@ -176,18 +176,33 @@
                 }
             }
         }`;
+    // working
+    // fetch('https://taskplum.myshopify.com/api/2024-07/graphql', {
+    // method: 'POST',
+    // headers: {
+    //     'Content-Type': 'application/json',
+    //     'X-Shopify-Storefront-Access-Token': 'f3bd5a295047ba2d5ca308f7f40efffb',
+    // },
+    // body: JSON.stringify({ query }),
+    // })
+    // .then(response => response.json())
+    // .then(data => console.log(data))
+    // .catch(error => console.log('There is error in code ' , error));
+    // working
 
-    fetch('https://taskplum.myshopify.com/api/2024-07/graphql', {
-    method: 'POST',
-    headers: {
-        'Content-Type': 'application/json',
-        'X-Shopify-Storefront-Access-Token': 'f3bd5a295047ba2d5ca308f7f40efffb',
-    },
-    body: JSON.stringify({ query }),
-    })
-    .then(response => response.json())
-    .then(data => console.log(data))
-    .catch(error => console.log('There is error in code ' , error));
+    async function getQuery(url = 'https://taskplum.myshopify.com/api/2024-07/graphql' , data = {} ) {
+        const response = await fetch(url , {
+            method : 'POST' , 
+            headers : {
+                'Content-Type' : 'application/json',
+                'X-Shopify-Storefront-Access-Token' : 'f3bd5a295047ba2d5ca308f7f40efffb', 
+            },
+            body : JSON.stringify(data)
+        });
+
+        return response.json();
+    }
+    getQuery();
      });
     
 
