@@ -155,10 +155,10 @@
     // });
      $('.filters a').on('click', function() {
         var collectionHandle = $(this).data('collection-handle');
-        if(collectionHandle.value == 'all'){
+        var encodedQuery = encodeURIComponent(collectionHandle)
+        if( $(this).data('collection-handle') == 'all'){
             console.log(collectionHandle);
         }
-        var encodedQuery = encodeURIComponent(collectionHandle)
         
         const query = `{
             if(){
