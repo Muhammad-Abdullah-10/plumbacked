@@ -158,7 +158,9 @@
         // var encodedQuery = encodeURIComponent(collectionHandle)
         var encodedQuery;
         if( $(this).data('collection-handle') == 'all'){
-            var encodedQuery = 'all'
+            var getAllCollections = [{{ section.settings.collectionone.id   }} ,  {{ section.settings.collectiontwo.id  }} , {{ section.settings.collectionthree.id }} ];
+            console.log(getAllCollections);
+            
         }
         else {
             var encodedQuery = encodeURIComponent(collectionHandle)
