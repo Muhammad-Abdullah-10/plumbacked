@@ -330,7 +330,7 @@ header,
 }
 .product--wrapper-img:hover .shop-bar {
     display: block;
-    bottom: 16%;
+    bottom: 15%;
     background: #1E2832;
     display: flex;
     flex-direction: row;
