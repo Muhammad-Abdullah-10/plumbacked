@@ -21,7 +21,7 @@
   <div class="container max-1320 w-100 p-0 filter-wrapper my-md-3 my-lg-5">
     <div class="row max-1320 w-100 filter-row">
       <div class="filters w-50">
-        <a href="javascript:void(0)" data-collection-handle="{{ section.settings.collectionone }} , {{ section.settings.collectiontwo }} , {{ section.settings.collectionthree }} " class="filter-name active">All</a>
+        <a href="javascript:void(0)" class="filter-name active">All</a>
         <a href="javascript:void(0)" data-collection-id="{{ section.settings.collectionone.id }}" data-collection-handle="{{ section.settings.collectionone }}" class="filter-name">{{ section.settings.collectionone.title }}</a>
         <a href="javascript:void(0)" data-collection-id="{{ section.settings.collectiontwo.id }}" data-collection-handle="{{ section.settings.collectiontwo }}" class="filter-name">{{ section.settings.collectiontwo.title }}</a>
         <a href="javascript:void(0)" data-collection-id="{{ section.settings.collectionthree.id }}" data-collection-handle="{{ section.settings.collectionthree }}" class="filter-name">{{ section.settings.collectionthree.title }}</a>
@@ -153,23 +153,11 @@
     //   });
 
     // });
-    var collectionList = $('.filters a').data('collection-handle');
-    // console.log(collectionList);
     
      $('.filters a').on('click', function() {
         var collectionHandle = $(this).data('collection-handle');
-        // var encodedQuery = encodeURIComponent(collectionHandle)
-        var encodedQuery ;
-        console.log(collectionHandle);
-        
-        var encodedQuery;
-        if( $(this).data('collection-handle') == collectionList){
-            var encodedQuery = encodeURIComponent(collectionList);
-            console.log(encodedQuery);
-        }
-        else {
-            var encodedQuery = encodeURIComponent(collectionHandle)
-        }
+        var encodedQuery = encodeURIComponent(collectionHandle)
+
         
         const query = `{
             collectionByHandle(handle: "${encodedQuery}") {
