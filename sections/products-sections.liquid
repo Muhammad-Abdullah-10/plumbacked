@@ -154,7 +154,7 @@
 
     // });
     var collectionList = $('.filters a').data('collection-handle');
-    console.log(collectionList);
+    // console.log(collectionList);
     
      $('.filters a').on('click', function() {
         var collectionHandle = $(this).data('collection-handle');
@@ -164,7 +164,7 @@
         
         var encodedQuery;
         if( $(this).data('collection-handle') == 'all'){
-            var encodedQuery = encodeURIComponent('all');
+            var encodedQuery = encodeURIComponent(collectionList);
         }
         else {
             var encodedQuery = encodeURIComponent(collectionHandle)
