@@ -319,7 +319,9 @@ header,
 }
 .product--wrapper-img .img-wrapper img {
     width: 300px;
-    height: 300px;
+    max-width: 300px;
+    height: 280px;
+    max-height: 280px;
 }
 .product--wrapper-img .shop-bar {
     display: none;
