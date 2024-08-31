@@ -153,6 +153,9 @@
     //   });
 
     // });
+    var collectionList = $('.filters a');
+    console.log(collectionList);
+    
      $('.filters a').on('click', function() {
         var collectionHandle = $(this).data('collection-handle');
         // var encodedQuery = encodeURIComponent(collectionHandle)
@@ -202,7 +205,8 @@
     // working
 
     
-    async function getQuery(url = 'https://taskplum.myshopify.com/api/2024-07/graphql' ) {
+    async function getQuery(url = 'https://taskplum.myshopify.com/api/2024-07/graphql' ) 
+    {
         try {
             const response = await fetch(url , {
             method : 'POST' , 
@@ -213,12 +217,12 @@
             body : JSON.stringify({ query })
         });
         if (!response.ok) {
-            throw new Error(`HTTP ERRRO : ${response.error}`);
+            throw new Error(`HTTP ERRRO : ${response.statusText}`);
             
         }
         const results = await response.json();
-        var conResults = console.log(results);
-        return conResults;
+        console.log(results); 
+        return results; 
 
         } 
         catch (error) {
