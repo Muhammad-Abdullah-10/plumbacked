@@ -40,7 +40,7 @@
             <div class="row w-100 max-1320 mx-auto display-grid">
                 <!-- product -->
                  {% for product in collections %}
-                    <div class="product--wrapper position-relative">
+                    <div class="product--wrapper product-update-by-collection position-relative">
                         <div class="product--wrapper-img">
                             <a href="{{ product.url }}" class="img-wrapper">
                                 <img src="{{ product.featured_image |  image_url: height: 330  }}" alt="" class="product-img">
@@ -127,6 +127,20 @@
 
 {% javascript %}
     $(document).ready(function() {
+    $('.filters a').on('click' , function(){
+        var collectionHandle = $(this).data('collection-handle');
+        var hmtlEdited = $('.product-update-by-collection');
+        // console.log( JSON.parse(hmtlEdited) );
+        console.log(collectionHandle);
+
+        fetch('?/shopify-section-template--21410886778903__products_sections_WUArMg')
+        .then(response => response.json())
+        .then(data => console.log(data))
+        .catch(err => console.error(err));
+        
+    })
+
+
     // $('.filters a').on('click', function() {
     //   var collectionHandle = $(this).data('collection-handle');
     //   var collectionIdGet = $(this).data('collection-id');
@@ -158,27 +172,28 @@
         var collectionHandle = $(this).data('collection-handle');
         // var encodedQuery = encodeURIComponent(collectionHandle)
 
-        
-        const query = `{
-            collectionByHandle(handle: "${collectionHandle}") {
-                title
-                products(first: 10) {
-                    edges {
-                        node {
-                            id
-                            title
-                            handle
-                            priceRange {
-                                minVariantPrice {
-                                    amount
-                                    currencyCode
-                                }
-                            }
-                        }
-                    }
-                }
-            }
-        }`;
+        // GraphQL Query
+        // const query = `{
+        //     collectionByHandle(handle: "${collectionHandle}") {
+        //         title
+        //         products(first: 10) {
+        //             edges {
+        //                 node {
+        //                     id
+        //                     title
+        //                     handle
+        //                     priceRange {
+        //                         minVariantPrice {
+        //                             amount
+        //                             currencyCode
+        //                         }
+        //                     }
+        //                 }
+        //             }
+        //         }
+        //     }
+        // }`;
+        // **************
         // Fetch Method working
         // fetch('https://taskplum.myshopify.com/api/2024-07/graphql', {
         // method: 'POST',
@@ -193,33 +208,34 @@
         // .catch(error => console.log('There is error in code ' , error));
         // Fetch Method working
 
-        // Async Method Working
-        async function getQuery(url = 'https://taskplum.myshopify.com/api/2024-07/graphql' ) 
-        {
-            try {
-                const response = await fetch(url , {
-                method : 'POST' , 
-                headers : {
-                    'Content-Type' : 'application/json',
-                    'X-Shopify-Storefront-Access-Token' : 'f3bd5a295047ba2d5ca308f7f40efffb', 
-                },
-                body : JSON.stringify({ query })
-            });
-            if (!response.ok) {
-                throw new Error(`HTTP ERRRO : ${response.statusText}`);
+        // Async Method Working Using Storefornt
+        // async function getQuery(url = 'https://taskplum.myshopify.com/api/2024-07/graphql' ) 
+        // {
+        //     try {
+        //         const response = await fetch(url , {
+        //         method : 'POST' , 
+        //         headers : {
+        //             'Content-Type' : 'application/json',
+        //             'X-Shopify-Storefront-Access-Token' : 'f3bd5a295047ba2d5ca308f7f40efffb', 
+        //         },
+        //         body : JSON.stringify({ query })
+        //     });
+        //     if (!response.ok) {
+        //         throw new Error(`HTTP ERRRO : ${response.statusText}`);
                 
-            }
-            const results = await response.json();
-            console.log(results); 
-            return results; 
+        //     }
+        //     const results = await response.json();
+        //     console.log(results); 
+        //     return results; 
 
-            } 
-            catch (error) {
-                console.log("Error " , error);
-            }
+        //     } 
+        //     catch (error) {
+        //         console.log("Error " , error);
+        //     }
             
-        }
-        getQuery();
+        // }
+        // getQuery();
+        // Async Method Working Using Storefornt
      });
     
 
