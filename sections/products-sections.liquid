@@ -173,6 +173,7 @@
   {% endschema %}
 
 {% javascript %}
+
     $(document).ready(function() {
 
     // Not Working Section Render API
@@ -238,6 +239,7 @@
         // var encodedQuery = encodeURIComponent(collectionHandle)
 
         // GraphQL Query
+        // if()
         const query = `{
             collectionByHandle(handle: "${collectionHandle}") {
                 title
@@ -247,6 +249,9 @@
                             id
                             title
                             handle
+                            featuredImage {
+                                url
+                            }
                             priceRange {
                                 minVariantPrice {
                                     amount
@@ -301,14 +306,14 @@
             let lengthOfProductArray= results.data.collectionByHandle.products.edges.length;
             let valueApiEdges = results.data.collectionByHandle.products;
 
-            // console.log(results); 
+            console.log(results); 
             
             for(let i = 0 ; i <= lengthOfProductArray ; i++){
                 let product_returns = `
                 <div class="product--wrapper product-update-by-collection position-relative">
                     <div class="product--wrapper-img">
                         <a href="" class="img-wrapper">
-                            <img src="" alt="" class="product-img">
+                            <img src="${valueApiEdges.edges[i].node.featuredImage.url}" alt="${valueApiEdges.edges[i].node.featuredImage.altText}" class="product-img">
                         </a>
                         <div class="shop-bar position-absolute">
                             <div class="w-50">
@@ -348,6 +353,7 @@
                 </div>
             `;
             oldhtmlProducts.html(product_returns);
+            console.log(oldhtmlProducts.html(product_returns));
             }
             
             // jQuery ka use karke HTML ko replace karein
