@@ -179,7 +179,7 @@ header,
 .zara-big-logo {
   left: 0;
   top: 10%;
-  background: url("assets/zara-logo-right.png");
+  /* background: url("assets/zara-logo-right.png"); */
 }
 .logo-zara-data {
   max-width: 191px;

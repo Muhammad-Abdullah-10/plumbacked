@@ -60,7 +60,7 @@ $(document).ready(function() {
     
      $('.filters a').on('click', function() {
         var collectionHandle = $(this).data('collection-handle');
-        console.log("Working");
+    
         
         // var encodedQuery = encodeURIComponent(collectionHandle)
 
@@ -132,15 +132,22 @@ $(document).ready(function() {
             let oldhtmlProducts = $('.product-update-by-collection');
             let lengthOfProductArray= results.data.collectionByHandle.products.edges.length;
             let valueApiEdges = results.data.collectionByHandle.products;
-
-            console.log(results); 
-            
-            for(let i = 0 ; i <= lengthOfProductArray ; i++){
+             console.log(results)
+            // console.log(valueApiEdges); 
+            // console.log([results.data.collectionByHandle.products.edges]); 
+            // for (let fruit of arr) {
+            //     console.log(fruit);  // Output: apple, banana, orange
+            // }
+            for(let i = 0 ; i <= lengthOfProductArray ; i){
+                let imgUrl = valueApiEdges.edges[i].node.featuredImage.url;
+                let setimgUrl = imgUrl ? imgUrl : "";
+                
+                // console.log(valueApiEdges);
                 let product_returns = `
                 <div class="product--wrapper product-update-by-collection position-relative">
                     <div class="product--wrapper-img">
                         <a href="" class="img-wrapper">
-                            <img src="${valueApiEdges.edges[i].node.featuredImage.url}" alt="${valueApiEdges.edges[i].node.featuredImage.altText}" class="product-img">
+                            <img src="${setimgUrl}" alt="${valueApiEdges.edges[i].node.featuredImage.altText}" class="product-img">
                         </a>
                         <div class="shop-bar position-absolute">
                             <div class="w-50">
@@ -180,7 +187,7 @@ $(document).ready(function() {
                 </div>
             `;
             oldhtmlProducts.html(product_returns);
-            console.log(oldhtmlProducts.html(product_returns));
+            // console.log(oldhtmlProducts.html(product_returns));
             }
             
             // jQuery ka use karke HTML ko replace karein
